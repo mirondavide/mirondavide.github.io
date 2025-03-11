@@ -382,6 +382,9 @@ button:hover .icon {
         width: 41px;
         border-radius: 15px;
     }
+    .navbar ul li::after{
+        background-color: transparent;
+    }
 }
 
 @media (max-width: 500px)
@@ -413,6 +416,9 @@ button:hover .icon {
         height: 320px;
         margin-top: 0;
     }
+    .navbar ul li::after{
+        background-color: transparent;
+    }
 }
 
 @media (max-width: 400px) {
@@ -441,5 +447,8 @@ button:hover .icon {
         max-width: 90%;
         height: 320px;
         margin-top: 0;
+    }
+    .navbar ul li::after{
+        background-color: transparent;
     }
 }
