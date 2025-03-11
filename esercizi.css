@@ -45,8 +45,6 @@ html, body {
     border-radius: 15px;
 }
 
-
-
 .navbar ul li :nth-child(1) {
     margin-top: -10px;
 }
