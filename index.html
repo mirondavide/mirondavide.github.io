@@ -3,27 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo List</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/myLogo.png" type="image/x-icon">
+    <title>My Portfolio</title>
+    <link rel="icon" href="myLogo.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="esercizi.css">
 </head>
 <body>
-    <div class="container">
-         <div class="todo-app">
-            <h2>To-Do list <img src="images/icon.png"></h2>
-            <div class="row">
-                <input type="text" id="input-box" placeholder="Write your text here!">
-                <button onclick="addTask()">Add</button>
-            </div>
-            <ul id="list-container">
-                <!-- 
-                    <li class="checked">Task 1</li>
-                    <li>Task 2</li>
-                    <li>Task 3</li>
-                -->
-            </ul>
-         </div>
+<!--navbar-->
+    <div class="navbar">
+        <ul class="primo">
+            <li><img src="logo.jpg.png" class="logo" alt="Logo"></li>
+        </ul>
+        <ul class="secondo">
+            <li ><a target="_blank" href="personalProjects/personalProjects.html">PERSONAL PROJECTS</a></li>
+            <li class="social-contact">
+                <a href="https://github.com/mirondavide" target="_blank"><img src="socialButton/github.jpg" alt="GitHub"></a>
+                <a href="https://www.linkedin.com/in/davide-miron-8826a0257/" target="_blank"><img src="socialButton/linkedIn.jpg" alt="LinkedIn"></a>
+                <a href="https://www.instagram.com/davide__miron?igsh=MXdqMG55bGwxdHZzYw%3D%3D&utm_source=qr" target="_blank"><img src="socialButton/instagram.jpg" alt="Instagram"></a>
+            </li>
+        </ul>
     </div>
-    <script src="script.js"></script>
+
+<!--flip-card-->
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <div class="content">
+                    <a href="#">
+                        <h1>HI, I'M DAVIDE MIRON!</h1>
+                        <p>CLICK OR TAP FOR DETAILS!</p>
+                    </a>
+                </div>
+            </div>
+            <div class="flip-card-back">
+                <!-- Aggiungi il contenitore dei bottoni -->
+                <div class="button-container">
+                    <a href="curriculum/curriculum.pdf" target="_blank">
+                        <button class="CURRICULUM">
+                            <span class="text">CURRICULUM</span>
+                            <img class="icon" src="curriculum/fotoFile.jpg.png" alt="Icona">
+                        </button>
+                    </a>
+                    <!-- Puoi aggiungere altri bottoni qui se necessario -->
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
