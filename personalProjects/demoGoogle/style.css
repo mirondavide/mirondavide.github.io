@@ -1,3 +1,4 @@
+/* Desktop layout (already provided in your code) */
 body {
     background-color: rgb(240, 244, 249, 1);
     display: grid;
@@ -118,4 +119,95 @@ button:nth-child(2):hover
 {
     background-color: #003892;
     transform: scale(1.02);
+}
+
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+
+    .main {
+        width: 90%;
+        height: auto; /* Let the height adjust based on content */
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+
+    p {
+        font-size: 16px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    img {
+        width: 50px; /* Smaller logo on mobile */
+        margin: 0 auto;
+        display: block;
+    }
+
+    table {
+        width: 100%; /* Make the table fill the container */
+    }
+
+    table tr td {
+        display: block; /* Stack the columns */
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    #addEmail input {
+        width: 100%;
+        height: 45px;
+    }
+
+    #addEmail p {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    #learnMore p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    #buttons {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button:nth-child(2) {
+        padding: 10px 15px;
+    }
+
+    button:nth-child(1) {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    input {
+        font-size: 16px;
+    }
+
+    button:nth-child(1),
+    button:nth-child(2) {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
 }
