@@ -5,7 +5,6 @@ body {
     height: 100vh;
     margin: 0;
 }
-
 .main {
     border-radius: 30px;
     background-color: white;
@@ -13,11 +12,9 @@ body {
     width: 60%;
     padding: 20px;
 }
-
 img {
     width: 60px;
 }
-
 h1 {
     margin-top: 0;
     padding: 10px;
@@ -27,17 +24,14 @@ h1 {
     padding-bottom: 0;
     margin-bottom: 0;
 }
-
 p {
     padding-left: 10px;
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 table tr td:nth-child(even) {
     padding-left: 40px;
 }
-
 input {
     width: 90%;
     height: 50px;
@@ -47,34 +41,28 @@ input {
     outline: none; /* Removes the default focus outline */
    border-radius: 5px;
 }
-
 #addEmail input:focus {
     border-color: #0b57d0; /* Changes border color to blue when focused */
 }
-
 #addEmail p{
     color: #0b57d0;
     font-weight: 500;
     padding-left: 0;
 }
-
 #addEmail p:hover{
     background-color: #c6d2e4;
     display: inline-block;
     border-radius: 9px;
     cursor: pointer;
 }
-
 #learnMore span {
     color: #0b57d0;
 }
-
 #learnMore p{
     font-size: 16px;
     color: #585858;
     padding-left: 0;
 }
-
 button:nth-child(1)
 {
     background: none;
@@ -82,7 +70,6 @@ button:nth-child(1)
     border: none;
     font-size: 15px;
 }
-
 button:nth-child(2)
 {
     background-color: #0b57d0;
@@ -92,34 +79,28 @@ button:nth-child(2)
     border: none;
     padding: 12px 20px 12px 20px;
 }
-
 #buttons
 {
     display: flex;
     gap: 23px;
     justify-content: flex-end;
 }
-
 button:hover{
     cursor: pointer;
 }
-
 #learnMore span:hover{
     cursor: pointer;
     text-decoration: underline;
 }
-
 button:nth-child(1):hover{
 background-color: rgba(231, 231, 231, 0.253);
 border-radius: 30px;
 }
-
 button:nth-child(2):hover
 {
     background-color: #003892;
     transform: scale(1.02);
 }
-
 /* Mobile layout adjustments */
 @media (max-width: 768px) {
     body {
