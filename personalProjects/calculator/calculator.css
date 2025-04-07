@@ -1,0 +1,80 @@
+body {
+    background: linear-gradient(135deg, #8a7676, #0d0b0e);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center;     /* Centers content vertically */
+}
+
+.calc {
+    background-color: #0d0b0e8c;
+    display: flex;
+    justify-content: center; /* Ensures content is centered horizontally */
+    align-items: center;     /* Ensures content is centered vertically */
+    padding: 40px 20px ;
+    border-radius: 40px;
+    width: 17%; /* Adjust width for your layout */
+    min-width: 300px; /* Ensures it doesn't shrink too much */
+    height: auto; /* Let content decide the height */
+    flex-direction: column; /* Makes sure content is stacked vertically */
+    text-align: center; /* Centers text within the flex container */
+}
+
+table {
+    display: grid;
+}
+
+button {
+    color: white;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    border: none;
+    background-color: rgb(255, 140, 32);
+    border-radius: 30px;
+}
+
+.number {
+    background-color: rgb(66, 66, 66);
+}
+
+.result {
+    background-color: antiquewhite;
+}
+
+.zero {
+    grid-column: span 3;
+    width: 100%;
+}
+
+table tr:first-child td {
+    background-color: rgb(199, 199, 199);
+    height: 65px;
+}
+
+table tr:first-child td:first-child {
+    border-radius: 10px;
+}
+
+.up {
+    background-color: rgb(168, 167, 167);
+}
+
+table tr:first-child td:first-child{
+    padding: 20px;
+}
+
+button:hover{
+    background-color: rgba(131, 131, 131, 0.836);
+}
+
+.right:hover{
+    background-color: rgb(255, 189, 127);
+}
+
+.up:hover{
+    background-color: rgb(204, 204, 204);
+}
