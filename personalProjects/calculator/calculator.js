@@ -3,7 +3,7 @@ const buttons = document.querySelectorAll("button");
 
 
 display.style.fontSize = "20px";
-
+display.style.fontWeight = "700";
 
 let currentInput = "";
 
