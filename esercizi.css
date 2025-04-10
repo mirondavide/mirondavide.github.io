@@ -89,21 +89,15 @@ html, body {
     text-transform: uppercase;
 }
 
-.navbar ul li:nth-child(2) {
-    margin-left: 70px;
+
+#Theme:hover{
+    transform: scale(1);
+    animation: tema 0.4s ease forwards;
 }
 
-.social-contact a img {
-    width: 50px;
-    height: 50px;
-    border-radius: 20px;
-    transition: transform 0.3s ease;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.social-contact a img:hover {
-    transform: scale(1.3);
-    background-color: rgba(255, 255, 255, 0.2);
+@keyframes tema {
+    0%{transform: scale(1);}
+    100%{transform: scale(1.05);}
 }
 
 .flip-card {
