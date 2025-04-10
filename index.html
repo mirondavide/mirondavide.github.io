@@ -12,10 +12,10 @@
 <!--navbar-->
     <div class="navbar">
         <ul class="primo">
-            <li><img src="logo.jpg.png" class="logo" alt="Logo"></li>
+            <li><img id="logo" src="logo.jpg.png" class="logo" alt="Logo"></li>
         </ul>
         <ul class="secondo">
-            <li ><a target="_blank" href="personalProjects/personalProjects.html">PERSONAL PROJECTS</a></li>
+            <li ><a id="personalProjects" target="_blank" href="personalProjects/personalProjects.html">PERSONAL PROJECTS</a></li>
             <li class="social-contact">
                 <a href="https://github.com/mirondavide" target="_blank"><img src="socialButton/github.jpg" alt="GitHub"></a>
                 <a href="https://www.linkedin.com/in/davide-miron-8826a0257/" target="_blank"><img src="socialButton/linkedIn.jpg" alt="LinkedIn"></a>
@@ -27,7 +27,7 @@
 <!--flip-card-->
     <div class="flip-card">
         <div class="flip-card-inner">
-            <div class="flip-card-front">
+            <div id="frontCard" class="flip-card-front">
                 <div class="content">
                     <a href="#">
                         <h1>HI, I'M DAVIDE MIRON!</h1>
@@ -35,9 +35,9 @@
                     </a>
                 </div>
             </div>
-            <div class="flip-card-back">
+            <div id="backCard" class="flip-card-back">
                 <!-- Aggiungi il contenitore dei bottoni -->
-                <div class="button-container">
+                <div  class="button-container">
                     <a href="curriculum/curriculum.pdf" target="_blank">
                         <button class="CURRICULUM">
                             <span class="text">CURRICULUM</span>
@@ -49,5 +49,7 @@
             </div>
         </div>
     </div>
+    <button onclick="changeTheme()">Toggle Theme</button>
+    <script src="script.js"></script>
 </body>
 </html>
