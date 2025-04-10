@@ -149,7 +149,7 @@ html, body {
 }
 
 .flip-card-front {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+    background: rgb(0, 0, 0);
     color: white;
     border-radius: 10px;
     padding: 20px;
@@ -185,7 +185,7 @@ html, body {
 }
 
 .flip-card-back {
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 1));
+    background: rgb(0, 0, 0);
     color: white;
     transform: rotateY(180deg);
     border-radius: 10px;
