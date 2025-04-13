@@ -10,8 +10,8 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
-    background: black;
-    color: white;
+    background: white;
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,6 +32,7 @@ html, body {
     left: 0;
     z-index: 100;
     box-sizing: border-box;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -45,8 +46,6 @@ html, body {
     border-radius: 15px;
 }
 
-
-
 .navbar ul li :nth-child(1) {
     margin-top: -10px;
 }
@@ -54,7 +53,7 @@ html, body {
 .navbar ul li {
     margin: 0 20px;
     position: relative;
-    font-size: 25px;
+    font-size: 27px;
 }
 
 .navbar ul li::after {
@@ -64,8 +63,8 @@ html, body {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #fff;
-    transition: width 0.7s ease;
+    background-color: #000000;
+    transition: width 0.5s ease;
 }
 
 .secondo :first-child:hover::after {
@@ -85,7 +84,7 @@ html, body {
 
 .navbar a {
     text-decoration: none;
-    color: #f5f5f5;
+    color: #000000;
     text-transform: uppercase;
 }
 
@@ -94,11 +93,12 @@ html, body {
 }
 
 .social-contact a img {
-    width: 50px;
-    height: 50px;
+    width: 55px;
+    height: 55px;
     border-radius: 20px;
     transition: transform 0.3s ease;
     background-color: rgba(255, 255, 255, 0.1);
+    margin: 7px;
 }
 
 .social-contact a img:hover {
@@ -149,23 +149,19 @@ html, body {
 }
 
 .flip-card-front {
-    background: rgb(0, 0, 0);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 20px;
 }
 
-@keyframes zoomIn {
-    0% { transform: scale(1); opacity: 0; }
-    100% { transform: scale(1.2); opacity: 1; }
-}
-
 .content h1, .content p {
-    animation: zoomIn 1s ease forwards;
+    /* Animazione di zooming al caricamento della pagina */
+    animation: zoomIn 1s ease-out;
 }
 
 .content h1 {
-    font-size: 4.0rem;
+    font-size: 5rem; /* Mantieni la dimensione costante */
     margin: 0;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     white-space: nowrap;
@@ -179,14 +175,14 @@ html, body {
 .content p {
     font-weight: 100;
     line-height: 25px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-top: 10px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
 .flip-card-back {
-    background: rgb(0, 0, 0);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     transform: rotateY(180deg);
     border-radius: 10px;
     padding: 20px;
@@ -198,14 +194,14 @@ html, body {
 
 a {
     text-decoration: none;
-    color: white;
+    color: rgb(0, 0, 0);
     font-weight: bold;
 }
 
 .flip-card-back a {
     font-size: 30px;
     background-color: transparent;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
@@ -215,7 +211,7 @@ button {
     padding: 10px 20px;
     font-size: 18px;
     background-color: #424442;
-    color: white;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 5px;
     display: flex;
@@ -240,6 +236,10 @@ button {
     height: 20px;
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#curriculum:hover{
+    background-color: #424442;
 }
 
 button:hover .text {
@@ -367,7 +367,6 @@ button:hover .icon {
 
     li .social-contact img{
         padding: 20px;
-   
     }
 
     .secondo li:first-child{
@@ -397,7 +396,6 @@ button:hover .icon {
         border-radius: 15px;
     }
 
-    
     .logo {
         width: 90%;
         max-width: 120px;
@@ -429,7 +427,7 @@ button:hover .icon {
         width: 35px;
         border-radius: 15px;
     }
-    
+
     .logo {
         width: 70%;
         max-width: 120px;
@@ -447,9 +445,18 @@ button:hover .icon {
         margin-top: 0;
     }
 
-
     .navbar ul li::after{
         background-color: transparent;
     }
+}
 
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
