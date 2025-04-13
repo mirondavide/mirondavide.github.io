@@ -1,4 +1,7 @@
-let actualMode = "darkMode";
+
+  let actualMode = "lightMode";
+
+
 
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
@@ -8,8 +11,26 @@ const frontCard = document.getElementById("frontCard");
 const logo = document.getElementById("logo");
 const curriculum = document.getElementById("curriculum");
 
+// Inizializza Rive con il file .riv
+const r = new rive.Rive({
+  src: "davide.riv",  
+  canvas: document.getElementById("canvas"),
+  autoplay: true,
+  stateMachines: "Light/Dark Mode Button",
+  onLoad: () => {
+    console.log("Rive file loaded successfully!");
+    r.resizeDrawingSurfaceToCanvas();
+  },
+});
+
 function changeTheme() {
-  const isDark = actualMode === "darkMode";
+
+}
+
+
+function triggerRiveAnimation() {
+
+    const isDark = actualMode === "darkMode";
 
   for (let i = 0; i < p.length; i++) {
     p[i].style.color = isDark ? "black" : "white";
@@ -27,10 +48,21 @@ function changeTheme() {
 
   actualMode = isDark ? "lightMode" : "darkMode";
 
- if(actualMode == "lightMode")
-  {
-    curriculum.addEventListener('mouseover',() =>{
-    curriculum.style.backgroundColor = "#424442";    
-    });
+  console.log("Hai premuto il canvas!");
+
+
+  const stateMachine = r.stateMachines["State Machine 1"]; 
+
+  if (!stateMachine) {
+    console.error("State machine 'State Machine 1' non trovata");
+    return;
   }
+
+ 
+  stateMachine.play("NewState");  
+  console.log("Animazione cambiata!");
 }
+
+curriculum.addEventListener('click', () => {
+  console.log("Curriculum cliccato!");
+});
