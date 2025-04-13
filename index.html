@@ -7,15 +7,17 @@
     <link rel="icon" href="myLogo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Courier+New&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="esercizi.css">
+    <script src="https://unpkg.com/@rive-app/canvas@2.24.0"></script>
 </head>
 <body>
+    
 <!--navbar-->
     <div class="navbar">
         <ul class="primo">
-            <li><img id="logo" src="logo.jpg.png" class="logo" alt="Logo"></li>
+            <li><img id="logo" src="imgLogoInverted.png" class="logo" alt="Logo"></li>
         </ul>
         <ul class="secondo">
-            <li ><a id="personalProjects" target="_blank" href="personalProjects/personalProjects.html">PERSONAL PROJECTS</a></li>
+            <li><a id="personalProjects" target="_blank" href="personalProjects/personalProjects.html">PERSONAL PROJECTS</a></li>
             <li class="social-contact">
                 <a href="https://github.com/mirondavide" target="_blank"><img src="socialButton/github.jpg" alt="GitHub"></a>
                 <a href="https://www.linkedin.com/in/davide-miron-8826a0257/" target="_blank"><img src="socialButton/linkedIn.jpg" alt="LinkedIn"></a>
@@ -36,20 +38,22 @@
                 </div>
             </div>
             <div id="backCard" class="flip-card-back">
-                <!-- Aggiungi il contenitore dei bottoni -->
-                <div  class="button-container">
+                <div class="button-container">
                     <a href="curriculum/curriculum.pdf" target="_blank">
                         <button id="curriculum" class="CURRICULUM">
                             <span class="text">CURRICULUM</span>
                             <img class="icon" src="curriculum/fotoFile.jpg.png" alt="Icona">
                         </button>
                     </a>
-                    <!-- Puoi aggiungere altri bottoni qui se necessario -->
                 </div>
             </div>
         </div>
     </div>
-    <button id="Theme" onclick="changeTheme()">TOGGLE THEME</button>
+    
+    <!-- Canvas per il trigger -->
+    <canvas id="canvas" width="170" height="170" onclick="triggerRiveAnimation()"></canvas>
+
+    <!-- Assicurati che il file JavaScript venga caricato alla fine del body -->
     <script src="script.js"></script>
 </body>
 </html>
