@@ -387,6 +387,12 @@ canvas:hover{
     }
 }
 
+canvas{
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
 @media (max-width: 500px)
 {
 
@@ -437,7 +443,7 @@ canvas:hover{
     }
 
     .flip-card h1{
-        font-size: 36px;
+        font-size: 39px;
     }
 
     .flip-card p{
