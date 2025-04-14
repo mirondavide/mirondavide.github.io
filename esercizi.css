@@ -391,14 +391,20 @@ canvas:hover{
 @media (max-width: 500px)
 {
 
+    .navbar .secondo .social-contact{
+        padding-top: 5px;
+        margin-left: 0;
+    }
+
+
     .navbar {
         padding: 10px 15px;
     }
 
  .social-contact a img {
-        height: 40px;
-        width: 40px;
-        border-radius: 15px;
+        height: 30px;
+        width: 30px;
+        border-radius: 10px;
     }
 
     .logo {
@@ -408,7 +414,7 @@ canvas:hover{
     }
 
     .navbar ul li {
-        font-size: 23px;
+        font-size: 20px;
         margin: 5px 0;
     }
 
@@ -427,6 +433,10 @@ canvas:hover{
         padding: 10px 15px;
     }
 
+    .flip-card p{
+        font-size: 15px;
+    }
+
  .social-contact a img {
         height: 30px;
         width: 30px;
@@ -434,8 +444,24 @@ canvas:hover{
     }
 
     .logo {
-        width: 70%;
+        width: 80%;
         max-width: 120px;
+        margin-left: 0;
+    }
+
+    #logo{
+        width: 110px;
+        height:110px;
+    }
+
+    .social-contact a img {
+        width:  25px;
+        height: 25px;
+        border-radius: 6px;
+    }
+
+    .navbar .secondo .social-contact{
+        padding-top: 5px;
         margin-left: 0;
     }
 
