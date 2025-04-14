@@ -23,7 +23,6 @@ html, body {
 .navbar {
     width: 100%;
     padding: 20px 50px;
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +106,7 @@ html, body {
     max-width: 80%;
     height: 400px;
     perspective: 1000px;
-    margin-top: 120px;
+    margin-top: 220px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -402,7 +401,7 @@ canvas:hover{
 
 
     .navbar {
-        padding: 10px 15px;
+        padding: 40px 15px;
     }
 
  .social-contact a img {
@@ -434,11 +433,15 @@ canvas:hover{
 
 @media (max-width: 400px) {
     .navbar {
-        padding: 10px 15px;
+        padding: 30px 15px;
+    }
+
+    .flip-card h1{
+        font-size: 39px;
     }
 
     .flip-card p{
-        font-size: 15px;
+        font-size: 17px;
     }
 
  .social-contact a img {
@@ -462,7 +465,7 @@ canvas:hover{
     .social-contact a img {
         width:  25px;
         height: 25px;
-        border-radius: 6px;
+        border-radius: 8px;
     }
 
     .navbar .secondo .social-contact{
@@ -471,7 +474,7 @@ canvas:hover{
     }
 
     .navbar ul li {
-        font-size: 17px;
+        font-size: 18px;
         margin: 5px 0;
     }
 
@@ -486,8 +489,8 @@ canvas:hover{
     }
 
     canvas{
-        width: 90px;
-        height: 90px;
+        width: 110px;
+        height: 110px;
     }
 }
 
