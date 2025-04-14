@@ -1,0 +1,177 @@
+body {
+    background-color: rgb(240, 244, 249, 1);
+    display: grid;
+    place-items: center; /* Centers both horizontally and vertically */
+    height: 100vh;
+    margin: 0;
+}
+.main {
+    border-radius: 30px;
+    background-color: white;
+    height: 45%;
+    width: 60%;
+    padding: 20px;
+}
+img {
+    width: 60px;
+}
+h1 {
+    margin-top: 0;
+    padding: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 50px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+p {
+    padding-left: 10px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+table tr td:nth-child(even) {
+    padding-left: 40px;
+}
+input {
+    width: 90%;
+    height: 50px;
+    padding-left: 14px;
+    font-size: 17px;
+    border: 2px solid gray; /* Border color by default */
+    outline: none; /* Removes the default focus outline */
+   border-radius: 5px;
+}
+#addEmail input:focus {
+    border-color: #0b57d0; /* Changes border color to blue when focused */
+}
+#addEmail p{
+    color: #0b57d0;
+    font-weight: 500;
+    padding-left: 0;
+}
+#addEmail p:hover{
+    background-color: #c6d2e4;
+    display: inline-block;
+    border-radius: 9px;
+    cursor: pointer;
+}
+#learnMore span {
+    color: #0b57d0;
+}
+#learnMore p{
+    font-size: 16px;
+    color: #585858;
+    padding-left: 0;
+}
+button:nth-child(1)
+{
+    background: none;
+    color: #0b57d0;
+    border: none;
+    font-size: 15px;
+}
+button:nth-child(2)
+{
+    background-color: #0b57d0;
+    color: white;
+    font-size: 15px;
+    border-radius: 34px;
+    border: none;
+    padding: 12px 20px 12px 20px;
+}
+#buttons
+{
+    display: flex;
+    gap: 23px;
+    justify-content: flex-end;
+}
+button:hover{
+    cursor: pointer;
+}
+#learnMore span:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+button:nth-child(1):hover{
+background-color: rgba(231, 231, 231, 0.253);
+border-radius: 30px;
+}
+button:nth-child(2):hover
+{
+    background-color: #003892;
+    transform: scale(1.02);
+}
+/* Mobile layout adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+    }
+    .main {
+        width: 90%;
+        height: auto; /* Let the height adjust based on content */
+        border-radius: 20px;
+        padding: 20px;
+    }
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    p {
+        font-size: 16px;
+        padding-left: 0;
+        text-align: center;
+    }
+    img {
+        width: 50px; /* Smaller logo on mobile */
+        margin: 0 auto;
+        display: block;
+    }
+    table {
+        width: 100%; /* Make the table fill the container */
+    }
+    table tr td {
+        display: block; /* Stack the columns */
+        width: 100%;
+        padding: 10px 0;
+    }
+    #addEmail input {
+        width: 100%;
+        height: 45px;
+    }
+    #addEmail p {
+        text-align: center;
+        font-size: 14px;
+    }
+    #learnMore p {
+        font-size: 14px;
+        text-align: center;
+    }
+    #buttons {
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+    }
+    button:nth-child(2) {
+        padding: 10px 15px;
+    }
+    button:nth-child(1) {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    h1 {
+        font-size: 30px;
+    }
+    p {
+        font-size: 14px;
+    }
+    input {
+        font-size: 16px;
+    }
+    button:nth-child(1),
+    button:nth-child(2) {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
