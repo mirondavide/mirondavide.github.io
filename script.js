@@ -1,7 +1,4 @@
-
-  let actualMode = "lightMode";
-
-
+let actualMode = "lightMode";
 
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
@@ -10,7 +7,7 @@ const backCard = document.getElementById("backCard");
 const frontCard = document.getElementById("frontCard");
 const logo = document.getElementById("logo");
 const curriculum = document.getElementById("curriculum");
-
+const projects = document.getElementById("projects");
 // Inizializza Rive con il file .riv
 const r = new rive.Rive({
   src: "davide.riv",  
@@ -23,10 +20,11 @@ const r = new rive.Rive({
   },
 });
 
-function changeTheme() {
 
+function change()
+{
+  setTimeout(triggerRiveAnimation, 200);
 }
-
 
 function triggerRiveAnimation() {
 
