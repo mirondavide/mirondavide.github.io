@@ -283,6 +283,11 @@ canvas:hover{
     .content p {
         font-size: 1rem;
     }
+
+    canvas{
+        width: 130px;
+        height: 130px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -447,6 +452,11 @@ canvas:hover{
 
     .navbar ul li::after{
         background-color: transparent;
+    }
+
+    canvas{
+        width: 90px;
+        height: 90px;
     }
 }
 
