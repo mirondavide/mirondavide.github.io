@@ -8,6 +8,20 @@ const frontCard = document.getElementById("frontCard");
 const logo = document.getElementById("logo");
 const curriculum = document.getElementById("curriculum");
 const projects = document.getElementById("projects");
+const canvas = document.getElementById("canvas");
+
+// Funzione unica per gestire click/touch
+function handleInteraction(event) {
+  event.preventDefault(); // fondamentale su mobile
+  change();
+}
+
+// Click desktop
+canvas.addEventListener("click", handleInteraction);
+
+// Tap mobile
+canvas.addEventListener("touchend", handleInteraction);
+
 // Inizializza Rive con il file .riv
 const r = new rive.Rive({
   src: "davide.riv",  
