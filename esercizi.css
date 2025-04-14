@@ -458,6 +458,7 @@ canvas:hover{
         height:110px;
     }
 
+
     .social-contact a img {
         width:  25px;
         height: 25px;
@@ -477,7 +478,7 @@ canvas:hover{
     .flip-card {
         max-width: 90%;
         height: 320px;
-        margin-top: 0;
+        margin-top: 120px;
     }
 
     .navbar ul li::after{
