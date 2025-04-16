@@ -1,4 +1,4 @@
-let actualMode = "lightMode";
+let actualMode = "lightMode"; // Valore di default
 
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
@@ -31,19 +31,24 @@ const r = new rive.Rive({
   onLoad: () => {
     console.log("Rive file loaded successfully!");
     r.resizeDrawingSurfaceToCanvas();
+
+    // Quando il file Rive è caricato, ripristina il tema
+    const savedTheme = localStorage.getItem('theme') || 'lightMode';
+    if (savedTheme === 'darkMode') {
+      actualMode = 'darkMode';
+      triggerRiveAnimation();
+    }
   },
 });
 
-
-function change()
-{
+function change() {
   setTimeout(triggerRiveAnimation, 200);
 }
 
 function triggerRiveAnimation() {
+  const isDark = actualMode === "darkMode";
 
-    const isDark = actualMode === "darkMode";
-
+  // Cambia colori e immagini
   for (let i = 0; i < p.length; i++) {
     p[i].style.color = isDark ? "black" : "white";
   }
@@ -58,23 +63,24 @@ function triggerRiveAnimation() {
   backCard.style.backgroundColor = isDark ? "white" : "black";
   logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
 
+  // Cambia modalità e salva in localStorage
   actualMode = isDark ? "lightMode" : "darkMode";
+  localStorage.setItem('theme', actualMode);
 
   console.log("Hai premuto il canvas!");
 
-
+  // Trigger animazione Rive
   const stateMachine = r.stateMachines["State Machine 1"]; 
-
   if (!stateMachine) {
     console.error("State machine 'State Machine 1' non trovata");
     return;
   }
 
- 
-  stateMachine.play("NewState");  
+  stateMachine.play("NewState");
   console.log("Animazione cambiata!");
 }
 
+// Eventuale azione sul curriculum
 curriculum.addEventListener('click', () => {
   console.log("Curriculum cliccato!");
 });
