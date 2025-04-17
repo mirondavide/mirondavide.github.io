@@ -34,6 +34,11 @@ html, body {
     margin-bottom: 20px;
 }
 
+.flip-card .flip-card-back .button-container img{
+    width: 30px;
+    height: 30px;
+}
+
 .logo {
     width: 100%;
     max-width: 220px;
