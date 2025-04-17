@@ -1,6 +1,5 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(to right, #f5f5f5, #e3e6e8);
     color: #333;
     margin: 0;
     padding: 0;
@@ -20,8 +19,7 @@ body {
     display: flex;
     justify-content: space-between;     /* Centra ORIZZONTALMENTE */
     align-items: center;         /* Centra VERTICALMENTE */
-    padding: 0 20px;
-}
+    padding: 0 20px;}
 
 .primo .secondo{
     position: relative;
@@ -184,36 +182,16 @@ h1 {
 
 
 /* Media Queries */
-@media (max-width: 1024px) {
-    h1 {
-        font-size: 38px;
+@media (max-width: 1200px) {
+    .logo {
+        margin-left: 0;
     }
-    .element {
-        max-width: 270px;
+    .navbar {
+        padding: 0px 40px;
     }
-}
 
-@media (max-width: 768px) {
-    
-    .element {
-        max-width: 90%;
-    }
-    h1 {
-        font-size: 32px;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
-        margin-bottom: 50px;
-    }
-    .element {
-        max-width: 100%;
-        padding: 20px;
-    }
-    .demos a {
-        padding: 12px 22px;
+    .navbar ul li {
+        font-size: 22px;
     }
 }
 
@@ -228,6 +206,16 @@ h1 {
 
     .navbar ul li {
         font-size: 22px;
+    }
+}
+
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 38px;
+    }
+    .element {
+        max-width: 270px;
     }
 }
 
@@ -250,6 +238,15 @@ h1 {
 
 }
 
+@media (max-width: 768px) {
+    
+    .element {
+        max-width: 90%;
+    }
+    h1 {
+        font-size: 32px;
+    }
+}
 
 @media (max-width: 600px) {
 
