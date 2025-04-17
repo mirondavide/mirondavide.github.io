@@ -20,6 +20,11 @@ html, body {
     min-height: 100vh;
 }
 
+.flip-card .flip-card-back .button-container img{
+    width: 30px;
+    height: 30px;
+}
+
 .navbar {
     width: 100%;
     padding: 20px 50px;
@@ -32,11 +37,6 @@ html, body {
     z-index: 100;
     box-sizing: border-box;
     margin-bottom: 20px;
-}
-
-.flip-card .flip-card-back .button-container img{
-    width: 30px;
-    height: 30px;
 }
 
 .logo {
