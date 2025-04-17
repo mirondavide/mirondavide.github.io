@@ -1,5 +1,4 @@
-let actualMode = "lightMode"; // Valore di default
-
+let actualMode = "lightMode"; 
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
 const p = document.getElementsByTagName("p");
@@ -16,10 +15,8 @@ function handleInteraction(event) {
   change();
 }
 
-// Click desktop
 canvas.addEventListener("click", handleInteraction);
 
-// Tap mobile
 canvas.addEventListener("touchend", handleInteraction);
 
 // Inizializza Rive con il file .riv
@@ -48,7 +45,6 @@ function change() {
 function triggerRiveAnimation() {
   const isDark = actualMode === "darkMode";
 
-  // Cambia colori e immagini
   for (let i = 0; i < p.length; i++) {
     p[i].style.color = isDark ? "black" : "white";
   }
@@ -63,13 +59,13 @@ function triggerRiveAnimation() {
   backCard.style.backgroundColor = isDark ? "white" : "black";
   logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
 
-  // Cambia modalità e salva in localStorage
+
   actualMode = isDark ? "lightMode" : "darkMode";
   localStorage.setItem('theme', actualMode);
 
   console.log("Hai premuto il canvas!");
 
-  // Trigger animazione Rive
+
   const stateMachine = r.stateMachines["State Machine 1"]; 
   if (!stateMachine) {
     console.error("State machine 'State Machine 1' non trovata");
@@ -80,7 +76,6 @@ function triggerRiveAnimation() {
   console.log("Animazione cambiata!");
 }
 
-// Eventuale azione sul curriculum
 curriculum.addEventListener('click', () => {
   console.log("Curriculum cliccato!");
 });
