@@ -16,20 +16,19 @@ function handleInteraction(event) {
 }
 
 canvas.addEventListener("click", handleInteraction);
-
 canvas.addEventListener("touchend", handleInteraction);
 
 // Inizializza Rive con il file .riv
 const r = new rive.Rive({
   src: "davide.riv",  
-  canvas: document.getElementById("canvas"),
+  canvas: canvas,
   autoplay: true,
   stateMachines: "Light/Dark Mode Button",
   onLoad: () => {
     console.log("Rive file loaded successfully!");
     r.resizeDrawingSurfaceToCanvas();
 
-    // Quando il file Rive è caricato, ripristina il tema
+    // Quando il file Rive è caricato, ripristina il tema salvato
     const savedTheme = localStorage.getItem('theme') || 'lightMode';
     if (savedTheme === 'darkMode') {
       actualMode = 'darkMode';
@@ -45,6 +44,7 @@ function change() {
 function triggerRiveAnimation() {
   const isDark = actualMode === "darkMode";
 
+  // Cambia colori del testo
   for (let i = 0; i < p.length; i++) {
     p[i].style.color = isDark ? "black" : "white";
   }
@@ -53,29 +53,30 @@ function triggerRiveAnimation() {
     h1[i].style.color = isDark ? "black" : "white";
   }
 
-  personalProjects.style.color = isDark ? "black" : "white";
+  if (personalProjects) personalProjects.style.color = isDark ? "black" : "white";
+  if (frontCard) frontCard.style.backgroundColor = isDark ? "white" : "black";
+  if (backCard) backCard.style.backgroundColor = isDark ? "white" : "black";
+  if (logo) logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
   document.body.style.backgroundColor = isDark ? "white" : "black";
-  frontCard.style.backgroundColor = isDark ? "white" : "black";
-  backCard.style.backgroundColor = isDark ? "white" : "black";
-  logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
 
-
+  // Aggiorna modalità e salva in localStorage
   actualMode = isDark ? "lightMode" : "darkMode";
   localStorage.setItem('theme', actualMode);
 
   console.log("Hai premuto il canvas!");
 
-
-  const stateMachine = r.stateMachines["State Machine 1"]; 
-  if (!stateMachine) {
-    console.error("State machine 'State Machine 1' non trovata");
-    return;
+  // Attiva il trigger 'toggle' nella state machine
+  const input = r.stateMachineInputs("Light/Dark Mode Button").find(i => i.name === "toggle");
+  if (input) {
+    input.fire(); // trigger
+    console.log("Animazione cambiata!");
+  } else {
+    console.error("Input 'toggle' non trovato");
   }
-
-  stateMachine.play("NewState");
-  console.log("Animazione cambiata!");
 }
 
-curriculum.addEventListener('click', () => {
-  console.log("Curriculum cliccato!");
-});
+if (curriculum) {
+  curriculum.addEventListener('click', () => {
+    console.log("Curriculum cliccato!");
+  });
+}
