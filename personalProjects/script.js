@@ -18,7 +18,8 @@ window.addEventListener('DOMContentLoaded', () => {
     if (todoList) todo.src = "img/todoInverted.png";
     if (calculator) calculator.src = "img/calculatorInverted.png";
     if (weather) weather.src = "img/weatherInverted.png";
-    if (weather) weather.src = "img/todolnverted.png";
+    
+    
 
     elements.forEach(el => {
       el.style.backgroundColor = "rgba(51, 51, 51, 0.86)";
