@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll(".element");
   const calculator = document.getElementById("calculator");
   const weather = document.getElementById("weather");
-  const todo = document.getElementById("todo");
+  const todo = document.getElementById("todoList");
   const buttons = document.querySelectorAll(".button");
 
   if (actualMode === 'darkMode') {
@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
       btn.style.backgroundColor = "rgba(133, 16, 16, 0.86)";
     });
 
-    if (todoList) todo.src = "img/todoInverted.png";
+    if (todo) todo.src = "img/todoInverted.png";
     if (calculator) calculator.src = "img/calculatorInverted.png";
     if (weather) weather.src = "img/weatherInverted.png";
     
