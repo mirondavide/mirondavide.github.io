@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
       btn.style.backgroundColor = "rgba(133, 16, 16, 0.86)";
     });
 
-    if (todo) todo.src = "img/todoInverted.png";
+    if (todoList) todo.src = "img/todoInverted.png";
     if (calculator) calculator.src = "img/calculatorInverted.png";
     if (weather) weather.src = "img/weatherInverted.png";
     if (weather) weather.src = "img/todolnverted.png";
