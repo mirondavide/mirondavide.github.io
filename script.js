@@ -10,11 +10,20 @@ const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
 
-if(innerWidth <= 768 ){
+document.addEventListener("DOMContentLoaded", function () {
+  const email = document.getElementById("email");
 
-  email.href = "mailto:davidemiron30@gmail.com";
+  if (email) {
+    if (window.innerWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      email.href = "mailto:davidemiron30@gmail.com";
+    } else {
+      email.href = "socialButton/sendEmail/index.html"; // Modifica con il tuo URL specifico
+    }
+  } else {
+    console.error("Elemento email non trovato!");
+  }
+});
 
-}
 
 
 // Funzione unica per gestire click/touch
