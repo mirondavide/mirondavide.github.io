@@ -8,6 +8,14 @@ const logo = document.getElementById("logo");
 const curriculum = document.getElementById("curriculum");
 const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
+const email = document.getElementById("email");
+
+if(innerWidth <= 768 ){
+
+  email.href = "mailto:davidemiron30@gmail.com";
+
+}
+
 
 // Funzione unica per gestire click/touch
 function handleInteraction(event) {
@@ -42,6 +50,7 @@ function change() {
 }
 
 function triggerRiveAnimation() {
+
   const isDark = actualMode === "darkMode";
 
   // Cambia colori del testo
