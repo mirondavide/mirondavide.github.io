@@ -10,19 +10,9 @@ const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
 
-document.addEventListener("DOMContentLoaded", function () {
-  const email = document.getElementById("email");
-
-  if (email) {
-    if (window.innerWidth <= 768 || /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
-      email.href = "mailto:davidemiron30@gmail.com";
-    } else {
-      email.href = "socialButton/sendEmail/index.html"; // Modifica con il tuo URL specifico
-    }
-  } else {
-    console.error("Elemento email non trovato!");
-  }
-});
+if (innerWidth <= 768) {
+  email.href = "mailto:davidemiron30@gmail.com";
+}
 
 
 
