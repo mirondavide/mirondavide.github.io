@@ -1,3 +1,4 @@
+const sottoTitolo = document.getElementById("sottotitolo");
 let actualMode = "lightMode"; 
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
@@ -12,6 +13,7 @@ const email = document.getElementById("email");
 
 if (innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
+  sottoTitolo.text = "HOVER FOR DETAILS!";
 }
 
 
