@@ -11,7 +11,7 @@ const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
 
-if (innerWidth <= 768) {
+if (window.innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
   sottoTitolo.textContent = "HOVER FOR DETAILS!";
 }
