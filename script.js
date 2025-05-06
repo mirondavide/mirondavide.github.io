@@ -13,7 +13,7 @@ const email = document.getElementById("email");
 
 if (window.innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
-  sottoTitolo.textContent = "HOVER FOR DETAILS!";
+  sottoTitolo.textContent = "CLICK FOR DETAILS!";
 }
 
 
