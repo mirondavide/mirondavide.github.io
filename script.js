@@ -1,3 +1,5 @@
+window.addEventListener('DOMContentLoaded', () => {
+  const actualMode = localStorage.getItem('theme') || 'lightMode';
 const sottoTitolo = document.getElementById("sottotitolo");
 let actualMode = "lightMode"; 
 const personalProjects = document.getElementById("personalProjects");
