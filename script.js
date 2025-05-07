@@ -91,3 +91,4 @@ if (curriculum) {
     console.log("Curriculum cliccato!");
   });
 }
+});
