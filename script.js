@@ -1,4 +1,4 @@
-const actualMode = localStorage.getItem('theme') || 'lightMode';
+let actualMode = 'lightMode';
 const sottoTitolo = document.getElementById("sottotitolo");
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
