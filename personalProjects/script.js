@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
   const actualMode = localStorage.getItem('theme') || 'lightMode';
-
   const body = document.body;
   const logo = document.getElementById("logo");
   const navbar = document.querySelector(".navbar");
