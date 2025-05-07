@@ -1,4 +1,4 @@
-let actualMode = 'lightMode';
+let actualMode = localStorage.getItem('theme') || 'lightMode';
 const sottoTitolo = document.getElementById("sottotitolo");
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
@@ -12,11 +12,9 @@ const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
 
 if (window.innerWidth <= 768) {
-  email.href = "mailto:davidemiron30@gmail.com";
-  sottoTitolo.textContent = "CLICK FOR DETAILS!";
+  if (email) email.href = "mailto:davidemiron30@gmail.com";
+  if (sottoTitolo) sottoTitolo.textContent = "CLICK FOR DETAILS!";
 }
-
-
 
 // Funzione unica per gestire click/touch
 function handleInteraction(event) {
@@ -29,7 +27,7 @@ canvas.addEventListener("touchend", handleInteraction);
 
 // Inizializza Rive con il file .riv
 const r = new rive.Rive({
-  src: "davide.riv",  
+  src: "davide.riv",
   canvas: canvas,
   autoplay: true,
   stateMachines: "Light/Dark Mode Button",
@@ -47,11 +45,10 @@ const r = new rive.Rive({
 });
 
 function change() {
-  setTimeout(triggerRiveAnimation, 200);
+  triggerRiveAnimation();
 }
 
 function triggerRiveAnimation() {
-
   const isDark = actualMode === "darkMode";
 
   // Cambia colori del testo
