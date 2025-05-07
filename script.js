@@ -1,5 +1,4 @@
-window.addEventListener('DOMContentLoaded', () => {
-  const actualMode = localStorage.getItem('theme') || 'lightMode';
+const actualMode = localStorage.getItem('theme') || 'lightMode';
 const sottoTitolo = document.getElementById("sottotitolo");
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
@@ -91,4 +90,3 @@ if (curriculum) {
     console.log("Curriculum cliccato!");
   });
 }
-});
