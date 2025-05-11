@@ -51,7 +51,6 @@ function change() {
 }
 
 function triggerRiveAnimation() {
-
   const isDark = actualMode === "darkMode";
 
   // Cambia colori del testo
@@ -67,23 +66,21 @@ function triggerRiveAnimation() {
   if (frontCard) frontCard.style.backgroundColor = isDark ? "none" : "none";
   if (backCard) backCard.style.backgroundColor = isDark ? "none" : "none";
   if (logo) logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
+  
+  // Applicazione del background
   if (isDark) {
-  document.body.style.backgroundColor = "#5e5e5e";
-  document.body.style.backgroundImage = `
-    radial-gradient(circle at 30% 30%, rgb(255, 255, 255), transparent 50%),
-    radial-gradient(circle at 70% 70%, rgb(175, 175, 175), transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(49, 48, 48, 0.801), transparent 60%)
-  `;
-} else {
-  document.body.style.backgroundColor = "rgb(51, 51, 51)";
-  document.body.style.backgroundImage = `
-    radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.12), transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(138, 138, 138, 0.08), transparent 50%),
-    radial-gradient(circle at 50% 50%, rgba(59, 59, 59, 0.84), transparent 60%)
-  `;
-}
-
-
+    document.body.style.backgroundImage = `
+      radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.12), transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(138, 138, 138, 0.08), transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(59, 59, 59, 0.84), transparent 60%)`;
+    document.body.style.backgroundColor = ""; // Rimuove il colore di fondo grigio
+  } else {
+    document.body.style.backgroundImage = `
+      radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(175, 175, 175, 0.6), transparent 50%),
+      radial-gradient(circle at 50% 50%, rgba(49, 48, 48, 0.6), transparent 60%)`;
+    document.body.style.backgroundColor = ""; // Non sovrascrive il background con un colore solido
+  }
 
   // Aggiorna modalità e salva in localStorage
   actualMode = isDark ? "lightMode" : "darkMode";
@@ -100,6 +97,7 @@ function triggerRiveAnimation() {
     console.error("Input 'toggle' non trovato");
   }
 }
+
 
 if (curriculum) {
   curriculum.addEventListener('click', () => {
