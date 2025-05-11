@@ -9,11 +9,9 @@ const curriculum = document.getElementById("curriculum");
 const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
-const hover = document.getElementById("cur");
 
 if (innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
-  
 }
 
 
@@ -69,8 +67,8 @@ function triggerRiveAnimation() {
   if (logo) logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
  document.body.style.background = isDark
   ? "none"
-  : `radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.52), transparent 50%),
-     radial-gradient(circle at 70% 70%, rgba(138, 138, 138, 0.43), transparent 50%),
+  : `radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.12), transparent 50%),
+     radial-gradient(circle at 70% 70%, rgba(138, 138, 138, 0.08), transparent 50%),
      radial-gradient(circle at 50% 50%, rgba(59, 59, 59, 0.84), transparent 60%),
      rgb(51, 51, 51)`; // Questo è lo sfondo "base" come ultimo livello
 
