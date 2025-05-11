@@ -9,9 +9,11 @@ const curriculum = document.getElementById("curriculum");
 const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
+const cur = document.getElementById("sottotitolo");
 
 if (innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
+  cur.textContent = "CLICK FOR DETAILS!";
 }
 
 
