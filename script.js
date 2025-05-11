@@ -13,7 +13,7 @@ const hover = document.getElementById("cur");
 
 if (innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
-  cur.textContent = "CLICK OR TAP FOR DETAILS!";
+  hover.textContent = "CLICK OR TAP FOR DETAILS!";
 }
 
 
