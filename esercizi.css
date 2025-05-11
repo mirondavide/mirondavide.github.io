@@ -389,7 +389,7 @@ canvas:hover{
     .social-contact a img {
         height: 30px;
         width: 30px;
-        border-radius: 15px;
+        border-radius: 10px;
     }
     .navbar ul li::after{
         background-color: transparent;
@@ -439,7 +439,7 @@ canvas{
     .flip-card {
         margin-top: 220px;
         max-width: 90%;
-        height: 150px;
+        height: 130px;
         padding-bottom: 0;
     }
     .navbar ul li::after{
@@ -447,7 +447,7 @@ canvas{
     }
 
     canvas{
-        margin-bottom: 220px;
+        margin-bottom: 200px;
     }
 }
 
