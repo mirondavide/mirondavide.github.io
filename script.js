@@ -9,7 +9,7 @@ const curriculum = document.getElementById("curriculum");
 const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
-const hover = document.getElementById("cur");
+const hover = document.getElementById("curr");
 
 if (innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
