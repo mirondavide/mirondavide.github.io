@@ -1,5 +1,4 @@
-let actualMode = localStorage.getItem('theme') || 'lightMode';
-const sottoTitolo = document.getElementById("sottotitolo");
+let actualMode = "lightMode"; 
 const personalProjects = document.getElementById("personalProjects");
 const h1 = document.getElementsByTagName("h1");
 const p = document.getElementsByTagName("p");
@@ -11,10 +10,11 @@ const projects = document.getElementById("projects");
 const canvas = document.getElementById("canvas");
 const email = document.getElementById("email");
 
-if (window.innerWidth <= 768) {
-  if (email) email.href = "mailto:davidemiron30@gmail.com";
-  if (sottoTitolo) sottoTitolo.textContent = "CLICK FOR DETAILS!";
+if (innerWidth <= 768) {
+  email.href = "mailto:davidemiron30@gmail.com";
 }
+
+
 
 // Funzione unica per gestire click/touch
 function handleInteraction(event) {
@@ -27,7 +27,7 @@ canvas.addEventListener("touchend", handleInteraction);
 
 // Inizializza Rive con il file .riv
 const r = new rive.Rive({
-  src: "davide.riv",
+  src: "davide.riv",  
   canvas: canvas,
   autoplay: true,
   stateMachines: "Light/Dark Mode Button",
@@ -45,10 +45,11 @@ const r = new rive.Rive({
 });
 
 function change() {
-  triggerRiveAnimation();
+  setTimeout(triggerRiveAnimation, 200);
 }
 
 function triggerRiveAnimation() {
+
   const isDark = actualMode === "darkMode";
 
   // Cambia colori del testo
@@ -61,10 +62,17 @@ function triggerRiveAnimation() {
   }
 
   if (personalProjects) personalProjects.style.color = isDark ? "black" : "white";
-  if (frontCard) frontCard.style.backgroundColor = isDark ? "white" : "black";
-  if (backCard) backCard.style.backgroundColor = isDark ? "white" : "black";
+  if (frontCard) frontCard.style.backgroundColor = isDark ? "none" : "none";
+  if (backCard) backCard.style.backgroundColor = isDark ? "none" : "none";
   if (logo) logo.src = isDark ? "imgLogoInverted.png" : "logo.jpg.png";
-  document.body.style.backgroundColor = isDark ? "white" : "black";
+ document.body.style.background = isDark
+  ? "none"
+  : `radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.12), transparent 50%),
+     radial-gradient(circle at 70% 70%, rgba(54, 54, 54, 0.08), transparent 50%),
+     radial-gradient(circle at 50% 50%, rgba(59, 59, 59, 0.84), transparent 60%),
+     rgb(51, 51, 51)`; // Questo è lo sfondo "base" come ultimo livello
+
+
 
   // Aggiorna modalità e salva in localStorage
   actualMode = isDark ? "lightMode" : "darkMode";
