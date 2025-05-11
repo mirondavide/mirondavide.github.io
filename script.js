@@ -14,21 +14,6 @@ const cur = document.getElementById("sottotitolo");
 if (innerWidth <= 768) {
   email.href = "mailto:davidemiron30@gmail.com";
   cur.textContent = "CLICK FOR DETAILS!";
-  if (isDark) 
-     {
-    document.body.style.backgroundImage = `
-      radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.12), transparent 50%),
-      radial-gradient(circle at 70% 70%, rgba(138, 138, 138, 0.08), transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(59, 59, 59, 0.84), transparent 60%)`;
-    document.body.style.backgroundColor = ""; // Rimuove il colore di fondo grigio
-  }
-    else{
-    document.body.style.backgroundImage = `
-      radial-gradient(circle at 30% 30%, rgb(255, 255, 255), transparent 50%),
-      radial-gradient(circle at 70% 70%, rgb(175, 175, 175), transparent 50%),
-      radial-gradient(circle at 50% 50%, rgba(49, 48, 48, 0.801), transparent 60%)`;
-    document.body.style.backgroundColor = "#5e5e5e"; // colore di sfondo di base
-  }
 }
 
 
