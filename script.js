@@ -77,9 +77,9 @@ function triggerRiveAnimation() {
   } else {
     document.body.style.backgroundImage = `
       radial-gradient(circle at 30% 30%, rgba(0, 0, 0, 0.45), transparent 50%),
-      radial-gradient(circle at 70% 70%, rgba(138, 138, 138, 0.29), transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(94, 94, 94, 0.29), transparent 50%),
       radial-gradient(circle at 50% 50%, rgba(59, 59, 59, 0.84), transparent 60%)`;
-    document.body.style.backgroundColor = ""; // Rimuove il colore di fondo grigio
+    document.body.style.backgroundColor = "black"; // Rimuove il colore di fondo grigio
   }
 
   // Aggiorna modalità e salva in localStorage
