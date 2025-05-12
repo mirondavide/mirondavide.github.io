@@ -76,7 +76,7 @@ function triggerRiveAnimation() {
     document.body.style.backgroundColor = "#5e5e5e"; // colore di sfondo di base
   } else {
     document.body.style.backgroundImage = `
-      radial-gradient(circle at 30% 30%, rgba(67, 67, 67, 0.45), transparent 50%),
+      radial-gradient(circle at 30% 30%, rgba(195, 195, 195, 0.45), transparent 50%),
       radial-gradient(circle at 70% 70%, rgb(18, 18, 18), transparent 50%),
       radial-gradient(circle at 50% 50%, rgba(20, 20, 20, 0.84), transparent 60%)`;
     document.body.style.backgroundColor = "#242424"; // Rimuove il colore di fondo grigio
