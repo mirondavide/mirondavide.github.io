@@ -187,7 +187,7 @@ textarea{
     }
 
     h1 {
-        font-size: 22px; /* Riduci la dimensione del titolo */
+        font-size: 22px; 
     }
 
     .btn {
@@ -201,7 +201,7 @@ textarea{
     }
 
     textarea {
-        font-size: 0.9rem; /* Riduci la dimensione del testo nella textarea */
+        font-size: 0.9rem; 
     }
 }
 
@@ -224,7 +224,7 @@ textarea{
     }
 
     h1 {
-        font-size: 20px; /* Riduci ulteriormente la dimensione del titolo */
+        font-size: 20px; 
     }
 
     .btn {
@@ -238,6 +238,6 @@ textarea{
     }
 
     textarea {
-        font-size: 0.85rem; /* Riduci la dimensione del testo nella textarea */
-    }
+        font-size: 0.85rem;    
+             }
 }
