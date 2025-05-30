@@ -63,6 +63,18 @@ mixpanel.track("Page Viewed", {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+const startTime = Date.now();
+
+window.addEventListener("beforeunload", function () {
+    const timeSpentMs = Date.now() - startTime;
+    const timeSpentSeconds = Math.round(timeSpentMs / 1000);
+
+    mixpanel.track("Time Spent on Page", {
+        page: window.location.pathname,
+        duration_seconds: timeSpentSeconds
+    });
+});
+
 
 // Verifica che Mixpanel sia caricato
 if (typeof mixpanel !== "undefined") {
