@@ -59,3 +59,37 @@ mixpanel.track("Page Viewed", {
     page: window.location.pathname,
     referrer: document.referrer
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+
+
+// Verifica che Mixpanel sia caricato
+if (typeof mixpanel !== "undefined") {
+    // GitHub
+    document.querySelector('a[href*="github.com"]').addEventListener('click', function () {
+        mixpanel.track("Click GitHub", { location: "navbar" });
+    });
+
+    // Email
+    document.querySelector('#email').addEventListener('click', function () {
+        mixpanel.track("Click Email", { location: "navbar" });
+    });
+
+    // LinkedIn
+    document.querySelector('a[href*="linkedin.com"]').addEventListener('click', function () {
+        mixpanel.track("Click LinkedIn", { location: "navbar" });
+    });
+
+    // Instagram
+    document.querySelector('a[href*="instagram.com"]').addEventListener('click', function () {
+        mixpanel.track("Click Instagram", { location: "navbar" });
+    });
+
+    // Curriculum
+    document.querySelector('#curriculum').addEventListener('click', function () {
+        mixpanel.track("Click Curriculum", { section: "flip-card" });
+    });
+}
+
+});
