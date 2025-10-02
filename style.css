@@ -494,6 +494,9 @@ html, body {
         animation: fadeInUp 0.8s ease-out 0.8s both;
     }
 
+    .theme-btn:hover .theme-icon {
+        transform: none;
+    }
 }
   
 /* Theme toggle button - minimal */
@@ -577,4 +580,8 @@ html, body {
   .brand-link:hover {
     color: #b4b4b4; /* blu acceso, sempre visibile */
   }
-  
+
+  @media (max-width: 720px){
+  [data-theme-toggle]:hover .theme-icon svg {
+    transform: none; /* rotazione leggera all’hover */
+}}
