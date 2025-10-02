@@ -13,10 +13,10 @@
     --color-bg: #000000;
     --color-text: #e5e7eb;
     --color-muted: #9ca3af;
-    --color-border: #000000;
+    --color-border: #464646;
     --color-brand: #60a5fa;
     --color-surface: #000000;
-    --header-bg: rgba(17,24,39,0.7);
+    --header-bg: rgba(0, 0, 0, 0.7);
 }
 
 * {
@@ -63,6 +63,11 @@ body {
     margin: 0 auto;
     padding: 12px 24px;
 }
+
+.px-7 {
+    padding-left: 25rem !important;
+    padding-right: 25rem !important;
+  }
 
 .brand {
     font-weight: 700;
@@ -209,7 +214,6 @@ body {
 }
 
 .site-footer {
-    border-top: 1px solid var(--color-border);
     padding: 20px 24px;
     color: var(--color-muted);
     background: var(--color-surface);
