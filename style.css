@@ -305,7 +305,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 16px;
+    padding: 14px 20px;
     border-radius: 14px;
     text-decoration: none;
     font-weight: 600;
@@ -386,7 +386,7 @@ body {
 	font-size: 18px;
 	line-height: 1;
 	transition: transform 0.3s ease;
-    
+    color: var(--color-text);
 }
 .theme-icon svg{
 	width: 18px;
@@ -455,10 +455,58 @@ body {
     .hero {
         padding-top: 42px;
     }
+
+    .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 10px;
+        border-radius: 14px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        transform: translateY(0);
+    }
+
+    .cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 16px;
+        flex-wrap: wrap;
+        animation: fadeInUp 0.8s ease-out 0.8s both;
+    }
+}
+  
+/* Theme toggle button - minimal */
+[data-theme-toggle] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.theme-icon {
-    color: var(--color-text); /* Cambia automaticamente col tema */
-    
-  }
-  
+[data-theme-toggle]:hover {
+    transform: scale(1.2); /* leggero ingrandimento al passaggio del mouse */
+    color: var(--color-brand); /* opzionale: cambia colore al hover */
+}
+
+.theme-icon svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+[data-theme-toggle]:hover .theme-icon svg {
+    transform: rotate(20deg); /* rotazione leggera all’hover */
+}
