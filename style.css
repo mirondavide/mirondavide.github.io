@@ -57,6 +57,7 @@ body {
   }
 
   .nav a:hover {
+    opacity: 0.85;
     color: var(--color-brand); /* o un altro colore chiaro visibile nel dark mode */
   }
 
@@ -99,7 +100,7 @@ body {
 }
 
 .brand:hover {
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .nav-links {
@@ -318,9 +319,9 @@ body {
 }
 
 .btn-icon {
-    width: 18px;
-    height: 18px;
-    border-radius: 4px;
+    width: 35px;
+    height: 35px;
+    border-radius: 8px;
     object-fit: cover;
     transition: transform 0.2s ease;
 }
@@ -332,7 +333,7 @@ body {
 .btn-outline {
     background: rgba(255,255,255,0.03);
     color: var(--color-text);
-    border: 1px solid rgba(255,255,255,0.18);
+    border: 1px solid rgb(199 199 199 / 18%);
     box-shadow: 0 1px 0 rgba(255,255,255,0.06) inset, 0 0 0 1px rgba(255,255,255,0.02);
 }
 
@@ -375,11 +376,6 @@ body {
 	color: var(--color-text);
 	cursor: pointer;
 	transition: all 0.3s ease;
-}
-
-.theme-btn:hover {
-	background: rgba(255,255,255,0.06);
-	transform: scale(1.05);
 }
 
 .theme-icon {
@@ -460,7 +456,6 @@ body {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        padding: 6px 10px;
         border-radius: 14px;
         text-decoration: none;
         font-weight: 600;
@@ -476,6 +471,7 @@ body {
         flex-wrap: wrap;
         animation: fadeInUp 0.8s ease-out 0.8s both;
     }
+
 }
   
 /* Theme toggle button - minimal */
@@ -509,4 +505,44 @@ body {
 
 [data-theme-toggle]:hover .theme-icon svg {
     transform: rotate(20deg); /* rotazione leggera all’hover */
+}
+
+[data-theme-toggle] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: none;   /* niente background */
+    border: none;       /* niente bordo */
+    padding: 0;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: transform 0.3s ease, color 0.3s ease;
+    outline: none;      /* rimuove il bordo di focus predefinito */
+}
+
+[data-theme-toggle]:hover {
+    transform: rotate(20deg); /* rotazione icona */
+    color: var(--color-brand); 
+    background: none;         /* forza niente background */
+    box-shadow: none;         /* niente shadow */
+}
+
+[data-theme-toggle]:focus,
+[data-theme-toggle]:active {
+    outline: none;
+    background: none;
+    box-shadow: none;
+}
+
+[data-theme-toggle] {
+    --bs-btn-active-bg: transparent; /* nessun background quando cliccato */
+}
+
+.nav a:hover {
+    opacity: 0.85;
+    color: var(--color-brand-light); /* usa colore leggibile in tema chiaro */
+}
+
+:root[data-theme="dark"] .nav a:hover {
+    color: var(--color-brand-dark); /* cambia colore in dark mode */
 }
