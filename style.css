@@ -3,7 +3,7 @@
     --color-text: #0f172a;
     --color-muted: #374151;
     --color-border: #e5e7eb;
-    --color-brand: #2563eb;
+    --color-brand: #ffffff;
     --color-surface: #ffffff;
     --header-bg: #ffffffcc;
 }
@@ -11,10 +11,10 @@
 /* Dark theme */
 :root[data-theme="dark"] {
     --color-bg: #000000;
-    --color-text: #e5e7eb;
+    --color-text: #ffffff;
     --color-muted: #9ca3af;
     --color-border: #464646;
-    --color-brand: #60a5fa;
+    --color-brand: #ffffff;
     --color-surface: #000000;
     --header-bg: rgba(0, 0, 0, 0.7);
 }
@@ -44,6 +44,29 @@ body {
     margin: 0 auto;
     padding: 24px;
 }
+
+.brand-link {
+    color: var(--color-text);
+    transition: color 0.3s ease;
+    font-weight: 700;
+  }
+  
+  .brand-link:hover {
+    opacity: 0.85;
+    color: var(--color-brand);
+  }
+
+  .nav a:hover {
+    color: var(--color-brand); /* o un altro colore chiaro visibile nel dark mode */
+  }
+
+  @media (max-width: 1024px) {
+    .px-7 {
+      padding-left: 1.5rem !important;
+      padding-right: 1.5rem !important;
+    }
+  }
+  
 
 .site-header {
     border-bottom: 1px solid var(--color-border);
@@ -266,7 +289,6 @@ body {
     display: block;
     margin: 0 auto 18px auto;
     box-shadow: 0 0 160px rgba(255,255,255,0.12), 0 0 64px rgba(255,255,255,0.08), 0 0 12px rgba(255,255,255,0.25);
-    animation: fadeInUp 0.8s ease-out 0.1s both, pulse 3s ease-in-out infinite 2s;
 }
 
 /* CTA group */
@@ -348,7 +370,7 @@ body {
 	width: 36px;
 	height: 36px;
 	border-radius: 10px;
-	border: 1px solid rgba(255,255,255,0.18);
+	border: 1px solid rgba(255, 0, 0, 0.18);
 	background: rgba(255,255,255,0.03);
 	color: var(--color-text);
 	cursor: pointer;
@@ -433,3 +455,9 @@ body {
         padding-top: 72px;
     }
 }
+
+.theme-icon {
+    color: var(--color-text); /* Cambia automaticamente col tema */
+    transition: color 0.3s ease;
+  }
+  
