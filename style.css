@@ -386,6 +386,7 @@ body {
 	font-size: 18px;
 	line-height: 1;
 	transition: transform 0.3s ease;
+    
 }
 .theme-icon svg{
 	width: 18px;
@@ -452,12 +453,12 @@ body {
         display: inline-block;
     }
     .hero {
-        padding-top: 72px;
+        padding-top: 42px;
     }
 }
 
 .theme-icon {
     color: var(--color-text); /* Cambia automaticamente col tema */
-    transition: color 0.3s ease;
+    
   }
   

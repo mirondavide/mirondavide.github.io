@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Davide Miron</title>
   <link rel="icon" href="myLogo.png" type="image/x-icon" />
-  
-  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,7 +32,7 @@
   </script>
 </head>
 <body>
-  <nav class="d-flex align-items-center justify-content-between px-7 py-2 sticky-top site-header">
+  <nav class="d-flex flex-wrap align-items-center justify-content-between px-3 px-lg-5 py-2 sticky-top site-header">
     <div class="brand">
       <a href="index.html" class="fs-2 text-decoration-none brand-link">miron.</a>
     </div>
@@ -64,29 +63,33 @@
   <!-- MAIN CONTENT -->
   <main class="container">
     <section class="hero text-center">
-      <img class="avatar" src="myLogo.png" alt="Profile" />
+      <img class="avatar img-fluid" src="myLogo.png" alt="Profile" style="max-width: 180px;" />
       <h1>Davide Miron</h1>
       <p class="subtitle">(Front-end Developer & Nerd)</p>
       <p class="tagline">Leaving the world better than I found it.</p>
 
-      <div class="cta-group d-flex justify-content-center gap-5 mt-5 pt-5">
-        <a class="btn btn-outline" href="https://www.linkedin.com/in/davide-miron/" aria-label="LinkedIn">
-          <img src="socialButton/linkedIn.jpg" alt="LinkedIn" class="btn-icon" /> LinkedIn
+      <div class="cta-group d-flex flex-column flex-md-row justify-content-center gap-3 mt-lg-5 pt-5">
+        <a class="btn btn-outline d-flex align-items-center justify-content-center gap-2" href="https://www.linkedin.com/in/davide-miron/" aria-label="LinkedIn">
+          <img src="socialButton/linkedIn.jpg" alt="LinkedIn" class="btn-icon img-fluid" style="max-width:24px;" /> LinkedIn
         </a>
-        <a class="btn btn-outline" href="https://github.com/mirondavide" aria-label="GitHub">
-          <img src="socialButton/github.jpg" alt="GitHub" class="btn-icon" /> Github
+        <a class="btn btn-outline d-flex align-items-center justify-content-center gap-2" href="https://github.com/mirondavide" aria-label="GitHub">
+          <img src="socialButton/github.jpg" alt="GitHub" class="btn-icon img-fluid" style="max-width:24px;" /> Github
         </a>
+        <a class="btn btn-outline d-flex align-items-center justify-content-center gap-2" href="curriculum/CV.pdf" target="_blank" rel="noopener" aria-label="CV">
+          <i class="bi bi-file-text"></i> CV
+        </a>          
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer text-center py-4 mt-5 pt-4">
+  <footer class="site-footer text-center py-4 py-4 mt-lg-5 pt-lg-4">
     <p class="mb-2">Leaving the world better than I found it.</p>
-    <div class="footer-social d-flex justify-content-center gap-3">
+    <div class="footer-social d-flex flex-row justify-content-center gap-3">
       <a href="https://www.linkedin.com/in/davide-miron/">LinkedIn</a>
       <a href="https://github.com/mirondavide">GitHub</a>
     </div>
+    
   </footer>
 
   <!-- Theme toggle script -->
