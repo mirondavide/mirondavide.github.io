@@ -28,25 +28,34 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <nav class="nav">
-      <div class="brand">
-        <a href="index.html" class="nav brand" style="text-decoration: none; color: white; font-size: 1.6rem;">miron.</a>
-      </div>
-      <button class="nav-toggle" aria-label="open navigation menu" aria-expanded="false">Menu</button>
-      <ul class="nav-links mb-0">
-        <li><a href="my-story.html">My Story</a></li>
-        <li><a href="now.html">Now</a></li>
+  <nav class="d-flex align-items-center justify-content-between px-7 py-2 sticky-top site-header">
+    <div class="brand">
+      <a href="index.html" class="text-white fs-2 text-decoration-none">miron.</a>
+    </div>
+  
+    <div class="d-flex align-items-center gap-3">
+      <ul class="nav mb-0 d-flex gap-3">
+        <!--
+        <li class="nav-item">
+          <a href="my-story.html" class="nav-link text-white">My Story</a>
+        </li>
+        -->
+        <!--
+        <li class="nav-item">
+          <a href="now.html" class="nav-link text-white">Now</a>
+        </li>
+        -->
       </ul>
-      <button data-theme-toggle class="theme-btn" aria-pressed="false" aria-label="Toggle dark theme" onclick="toggleTheme()">
+  
+      <button data-theme-toggle class="btn btn-outline-light" aria-pressed="false" aria-label="Toggle dark theme" onclick="toggleTheme()">
         <span id="themeIcon" class="theme-icon">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true" width="24" height="24" fill="currentColor">
             <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
           </svg>
         </span>
       </button>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <main class="container">
     <section class="hero pt-5">
@@ -78,7 +87,7 @@
 
       <img src="scuola.png" alt="scuola" class="img-fluid">
 
-      <div class="cta-group">
+      <div class="cta-group d-flex gap-5 mt-4">
         <a class="btn btn-outline" href="https://www.linkedin.com/in/davide-miron/" aria-label="LinkedIn">
           <img src="socialButton/linkedIn.jpg" alt="LinkedIn" class="btn-icon" /> LinkedIn
         </a>
@@ -86,15 +95,17 @@
           <img src="socialButton/github.jpg" alt="GitHub" class="btn-icon" /> Github
         </a>
       </div>
+      
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="footer-brand">miron.dev</div>
-    <p>Leaving the world better than I found it.</p>
-    <div class="footer-social">
-      <a href="https://www.linkedin.com/in/davide-miron/">Linkedin</a>
-      <a href="https://github.com/mirondavide">Github</a>
+  <!-- FOOTER -->
+  <footer class="site-footer text-center py-4 mt-5 pt-4">
+    <div class="footer-brand fw-bold">miron.dev</div>
+    <p class="mb-2">Leaving the world better than I found it.</p>
+    <div class="footer-social d-flex justify-content-center gap-3">
+      <a href="https://www.linkedin.com/in/davide-miron/">LinkedIn</a>
+      <a href="https://github.com/mirondavide">GitHub</a>
     </div>
   </footer>
 
