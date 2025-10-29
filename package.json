@@ -1,0 +1,27 @@
+{
+  "name": "mirondavide.github.io-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mixpanel-setup.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mirondavide/mirondavide.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mirondavide/mirondavide.github.io/issues"
+  },
+  "homepage": "https://github.com/mirondavide/mirondavide.github.io#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "eslint": "^9.38.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.4.0"
+  }
+}
