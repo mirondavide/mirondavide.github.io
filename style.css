@@ -715,4 +715,16 @@ html, body {
       text-align: center;
     }
   }
-  
+
+/* Content area links */
+.tagline a {
+  color: #7a7c81;
+  text-decoration: none;
+  border-bottom: 1px solid #6b7280;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.tagline a:hover {
+  color: #4b5563;
+  border-bottom-color: #4b5563;
+}
