@@ -21,31 +21,31 @@ export function SplineSceneBasic() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: isMobile ? 0.05 : 0.2,
+        staggerChildren: isMobile ? 0 : 0.2,
         delayChildren: isMobile ? 0 : 0.5,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: isMobile ? 10 : 30 },
+    hidden: { opacity: 0, y: isMobile ? 0 : 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: isMobile ? 0.2 : 0.8,
+        duration: isMobile ? 0.1 : 0.8,
         ease: "easeOut" as const,
       },
     },
   }
 
   const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0, scale: isMobile ? 1 : 0.95 },
     visible: {
       opacity: 1,
       scale: 1,
       transition: {
-        duration: isMobile ? 0.15 : 0.5,
+        duration: isMobile ? 0.1 : 0.5,
         ease: "easeOut" as const,
       },
     },
@@ -58,18 +58,23 @@ export function SplineSceneBasic() {
 
   return (
     <div className="w-full min-h-screen bg-black relative overflow-hidden">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
-
-      {/* Spline scene - full screen background */}
-      <div className={`absolute inset-0 ${isMobile ? 'pointer-events-none' : ''}`}>
-        <SplineScene
-          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-          className="w-full h-full"
+      {/* Spotlight only on desktop */}
+      {!isMobile && (
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
         />
-      </div>
+      )}
+
+      {/* Spline scene - full screen background (disabled on mobile for performance) */}
+      {!isMobile && (
+        <div className="absolute inset-0">
+          <SplineScene
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-full"
+          />
+        </div>
+      )}
 
       
       {/* Content overlay */}

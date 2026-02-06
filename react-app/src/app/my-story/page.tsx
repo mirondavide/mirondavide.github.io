@@ -20,26 +20,26 @@ export default function MyStoryPage() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: isMobile ? 0.03 : 0.15,
+        staggerChildren: isMobile ? 0 : 0.15,
         delayChildren: isMobile ? 0 : 0.3,
       },
     },
   }
 
   const itemVariants = {
-    hidden: { opacity: 0, y: isMobile ? 8 : 30 },
+    hidden: { opacity: 0, y: isMobile ? 0 : 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: isMobile ? 0.15 : 0.8,
+        duration: isMobile ? 0.1 : 0.8,
         ease: "easeOut" as const,
       },
     },
   }
 
   const buttonVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
+    hidden: { opacity: 0, scale: isMobile ? 1 : 0.95 },
     visible: {
       opacity: 1,
       scale: 1,
