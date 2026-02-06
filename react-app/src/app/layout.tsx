@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Davide Miron",
   description: "Building something that lasts beyond me.",
+  icons: {
+    icon: "/img/AI_img.jpeg",
+  },
 };
 
 export default function RootLayout({
