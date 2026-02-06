@@ -68,10 +68,10 @@ export function SplineSceneBasic() {
           {/* Hero Section */}
           <main className="flex-1 flex items-center justify-center px-4">
             <section className="text-center w-full max-w-2xl p-4">
-              <h1 className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+              <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
                 Davide Miron
               </h1>
-              <p className="mt-3 text-neutral-300 text-base font-light tracking-wide px-2">
+              <p className="mt-3 text-neutral-300 text-lg font-light tracking-wide px-2">
                 Building something that lasts beyond me.
               </p>
               <div className="flex flex-wrap justify-center gap-3 mt-6 pointer-events-auto">
