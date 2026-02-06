@@ -39,7 +39,7 @@ function MobileSpline() {
 }
 
 export function SplineSceneBasic() {
-  const [isMobile, setIsMobile] = useState(false)
+  const [isMobile, setIsMobile] = useState<boolean | null>(null)
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
@@ -47,6 +47,11 @@ export function SplineSceneBasic() {
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
+
+  // Show nothing until we know if mobile or desktop (prevents flash)
+  if (isMobile === null) {
+    return <div className="w-full min-h-screen bg-black" />
+  }
 
   // Mobile version - no animations, Spline loads after content
   if (isMobile) {
