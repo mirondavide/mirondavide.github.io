@@ -94,6 +94,7 @@ export default function MyStoryPage() {
                 alt="Profile"
                 width={150}
                 height={150}
+                priority
                 className="rounded-full mx-auto border-2 border-white/20 w-24 h-24 sm:w-36 sm:h-36 object-cover"
               />
             </motion.div>
@@ -134,7 +135,7 @@ export default function MyStoryPage() {
             {/* SwipeFlow Image */}
             <motion.div variants={itemVariants} className="my-6 sm:my-8">
               <Image
-                src="/img/SwipeFlow.png"
+                src="/img/SwipeFlow.jpg"
                 alt="SwipeFlow App"
                 width={500}
                 height={300}
