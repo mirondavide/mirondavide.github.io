@@ -22,20 +22,12 @@ export function SplineSceneBasic() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  // Mobile version - no animations at all
+  // Mobile version - no animations, no Spline (too heavy)
   if (isMobile) {
     return (
       <div className="w-full min-h-screen bg-black relative overflow-hidden">
-        {/* Spline scene - static background */}
-        <div className="absolute inset-0 pointer-events-none">
-          <SplineScene
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
-        </div>
-
-        {/* Content overlay */}
-        <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
+        {/* Content */}
+        <div className="relative z-10 min-h-screen flex flex-col">
           {/* Navbar */}
           <nav className="pointer-events-auto sticky top-0 px-4 py-2.5 backdrop-blur-md bg-white/5 border-b border-white/10">
             <div className="flex items-center justify-between">
