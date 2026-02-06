@@ -63,7 +63,7 @@ export function SplineSceneBasic() {
               <a href="/" className="text-2xl font-semibold text-white no-underline">
                 miron.
               </a>
-              <a href="/my-story" className="text-sm text-neutral-300 hover:text-white transition-colors">
+              <a href="/my-story" className="text-sm text-neutral-300">
                 My Story
               </a>
             </div>
