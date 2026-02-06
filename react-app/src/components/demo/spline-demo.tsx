@@ -12,6 +12,32 @@ const socialLinks = [
   { href: "/curriculum/CV.pdf", icon: FileUser, label: "CV" },
 ]
 
+// Delayed Spline loader for mobile - loads after content is visible
+function MobileSpline() {
+  const [shouldLoad, setShouldLoad] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false)
+
+  useEffect(() => {
+    // Wait 500ms before even starting to load Spline
+    const timer = setTimeout(() => setShouldLoad(true), 500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (!shouldLoad) return null
+
+  return (
+    <div
+      className={`absolute inset-0 pointer-events-none transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+    >
+      <SplineScene
+        scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+        className="w-full h-full"
+        onLoad={() => setIsLoaded(true)}
+      />
+    </div>
+  )
+}
+
 export function SplineSceneBasic() {
   const [isMobile, setIsMobile] = useState(false)
 
@@ -22,12 +48,15 @@ export function SplineSceneBasic() {
     return () => window.removeEventListener('resize', checkMobile)
   }, [])
 
-  // Mobile version - no animations, no Spline (too heavy)
+  // Mobile version - no animations, Spline loads after content
   if (isMobile) {
     return (
       <div className="w-full min-h-screen bg-black relative overflow-hidden">
+        {/* Spline loads after delay so content appears first */}
+        <MobileSpline />
+
         {/* Content */}
-        <div className="relative z-10 min-h-screen flex flex-col">
+        <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
           {/* Navbar */}
           <nav className="pointer-events-auto sticky top-0 px-4 py-2.5 backdrop-blur-md bg-white/5 border-b border-white/10">
             <div className="flex items-center justify-between">
