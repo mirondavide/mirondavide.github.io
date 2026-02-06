@@ -12,22 +12,13 @@ const socialLinks = [
   { href: "/curriculum/CV.pdf", icon: FileUser, label: "CV" },
 ]
 
-// Delayed Spline loader for mobile - loads after content is visible
+// Spline loader for mobile - loads immediately, fades in when ready
 function MobileSpline() {
-  const [shouldLoad, setShouldLoad] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    // Wait 500ms before even starting to load Spline
-    const timer = setTimeout(() => setShouldLoad(true), 500)
-    return () => clearTimeout(timer)
-  }, [])
-
-  if (!shouldLoad) return null
 
   return (
     <div
-      className={`absolute inset-0 pointer-events-none transition-opacity duration-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
     >
       <SplineScene
         scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
