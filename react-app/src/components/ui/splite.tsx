@@ -1,7 +1,6 @@
 'use client'
 
-import { Suspense, lazy } from 'react'
-const Spline = lazy(() => import('@splinetool/react-spline'))
+import Spline from '@splinetool/react-spline'
 
 interface SplineSceneProps {
   scene: string
@@ -11,14 +10,10 @@ interface SplineSceneProps {
 
 export function SplineScene({ scene, className, onLoad }: SplineSceneProps) {
   return (
-    <Suspense
-      fallback={<div className="w-full h-full bg-black" />}
-    >
-      <Spline
-        scene={scene}
-        className={className}
-        onLoad={onLoad}
-      />
-    </Suspense>
+    <Spline
+      scene={scene}
+      className={className}
+      onLoad={onLoad}
+    />
   )
 }
