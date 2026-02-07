@@ -33,7 +33,7 @@ export default function MyStoryPage() {
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Navbar */}
           <nav className="sticky top-0 px-4 py-2.5 backdrop-blur-md bg-white/5 border-b border-white/10">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center max-w-5xl mx-auto">
               <a href="/" className="text-2xl font-semibold text-white no-underline">
                 miron.
               </a>
@@ -46,7 +46,7 @@ export default function MyStoryPage() {
               {/* Avatar */}
               <div className="mb-4">
                 <Image
-                  src="/img/AI_img.jpeg"
+                  src="/img/AI_img.webp"
                   alt="Profile"
                   width={150}
                   height={150}
@@ -82,7 +82,7 @@ export default function MyStoryPage() {
               {/* SwipeFlow Image */}
               <div className="my-6">
                 <Image
-                  src="/img/SwipeFlow.jpg"
+                  src="/img/SwipeFlow.webp"
                   alt="SwipeFlow App"
                   width={500}
                   height={300}
@@ -110,7 +110,7 @@ export default function MyStoryPage() {
               {/* IMPLICAT Image */}
               <div className="my-6">
                 <Image
-                  src="/img/IMPLICAT.jpeg"
+                  src="/img/IMPLICAT.webp"
                   alt="IMPLICAT"
                   width={800}
                   height={400}
@@ -208,7 +208,7 @@ export default function MyStoryPage() {
           transition={{ duration: 0.6 }}
           className="sticky top-0 px-6 lg:px-10 py-3 backdrop-blur-md bg-white/5 border-b border-white/10"
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center max-w-5xl mx-auto">
             <motion.a
               href="/"
               className="text-3xl font-semibold text-white no-underline"
@@ -231,7 +231,7 @@ export default function MyStoryPage() {
             {/* Avatar */}
             <motion.div variants={itemVariants} className="mb-6">
               <Image
-                src="/img/AI_img.jpeg"
+                src="/img/AI_img.webp"
                 alt="Profile"
                 width={150}
                 height={150}
@@ -276,7 +276,7 @@ export default function MyStoryPage() {
             {/* SwipeFlow Image */}
             <motion.div variants={itemVariants} className="my-8">
               <Image
-                src="/img/SwipeFlow.jpg"
+                src="/img/SwipeFlow.webp"
                 alt="SwipeFlow App"
                 width={500}
                 height={300}
@@ -310,7 +310,7 @@ export default function MyStoryPage() {
             {/* IMPLICAT Image */}
             <motion.div variants={itemVariants} className="my-8">
               <Image
-                src="/img/IMPLICAT.jpeg"
+                src="/img/IMPLICAT.webp"
                 alt="IMPLICAT"
                 width={800}
                 height={400}

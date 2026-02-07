@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Davide Miron",
   description: "Building something that lasts beyond me.",
   icons: {
-    icon: "/img/AI_img.jpeg",
+    icon: "/img/AI_img.webp",
   },
 };
 

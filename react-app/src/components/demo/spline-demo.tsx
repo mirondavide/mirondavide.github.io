@@ -55,7 +55,7 @@ export function SplineSceneBasic() {
         <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
           {/* Navbar */}
           <nav className="pointer-events-auto sticky top-0 px-4 py-2.5 backdrop-blur-md bg-white/5 border-b border-white/10">
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between max-w-5xl mx-auto">
               <a href="/" className="text-2xl font-semibold text-white no-underline">
                 miron.
               </a>
@@ -159,7 +159,7 @@ export function SplineSceneBasic() {
           transition={{ duration: 0.6 }}
           className="pointer-events-auto sticky top-0 px-6 lg:px-10 py-3 backdrop-blur-md bg-white/5 border-b border-white/10"
         >
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between max-w-5xl mx-auto">
             <motion.a
               href="/"
               className="text-3xl font-semibold text-white no-underline"
@@ -168,16 +168,14 @@ export function SplineSceneBasic() {
             >
               miron.
             </motion.a>
-            <div className="flex items-center gap-6">
-              <motion.a
-                href="/my-story"
-                className="text-base text-neutral-300 hover:text-white transition-colors relative group"
-                whileHover={{ scale: 1.05 }}
-              >
-                My Story
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
-              </motion.a>
-            </div>
+            <motion.a
+              href="/my-story"
+              className="text-base text-neutral-300 hover:text-white transition-colors relative group"
+              whileHover={{ scale: 1.05 }}
+            >
+              My Story
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
+            </motion.a>
           </div>
         </motion.nav>
 
