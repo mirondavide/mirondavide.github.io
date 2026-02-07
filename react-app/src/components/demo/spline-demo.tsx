@@ -55,7 +55,7 @@ export function SplineSceneBasic() {
         <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
           {/* Navbar */}
           <nav className="pointer-events-auto sticky top-0 px-4 py-2.5 backdrop-blur-md bg-white/5 border-b border-white/10">
-            <div className="flex items-center justify-between max-w-5xl mx-auto px-12">
+            <div className="flex items-center justify-between max-w-5xl mx-auto px-8">
               <a href="/" className="text-2xl font-semibold text-white no-underline">
                 miron.
               </a>
@@ -159,7 +159,7 @@ export function SplineSceneBasic() {
           transition={{ duration: 0.6 }}
           className="pointer-events-auto sticky top-0 px-6 lg:px-10 py-3 backdrop-blur-md bg-white/5 border-b border-white/10"
         >
-          <div className="flex items-center justify-between max-w-5xl mx-auto px-12">
+          <div className="flex items-center justify-between max-w-5xl mx-auto px-8">
             <motion.a
               href="/"
               className="text-3xl font-semibold text-white no-underline"
