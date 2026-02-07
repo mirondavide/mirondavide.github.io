@@ -33,7 +33,7 @@ export default function MyStoryPage() {
         <div className="relative z-10 min-h-screen flex flex-col">
           {/* Navbar */}
           <nav className="sticky top-0 px-4 py-2.5 backdrop-blur-md bg-white/5 border-b border-white/10">
-            <div className="flex items-center max-w-5xl mx-auto px-4">
+            <div className="flex items-center max-w-5xl mx-auto px-8">
               <a href="/" className="text-2xl font-semibold text-white no-underline">
                 miron.
               </a>
@@ -208,7 +208,7 @@ export default function MyStoryPage() {
           transition={{ duration: 0.6 }}
           className="sticky top-0 px-6 lg:px-10 py-3 backdrop-blur-md bg-white/5 border-b border-white/10"
         >
-          <div className="flex items-center max-w-5xl mx-auto px-4">
+          <div className="flex items-center max-w-5xl mx-auto px-8">
             <motion.a
               href="/"
               className="text-3xl font-semibold text-white no-underline"
