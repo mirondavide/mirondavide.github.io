@@ -69,7 +69,7 @@ export default function MyStoryPage() {
               <p className="text-neutral-300 text-base text-left mb-4 leading-relaxed">
                 At 16, I built{" "}
                 <a
-                  href="https://apps.apple.com/us/app/swipeflow-photo-cleaner/id6755852265"
+                  href="https://mirondavide.github.io/SwipeFlowSite/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white underline underline-offset-4"
@@ -263,7 +263,7 @@ export default function MyStoryPage() {
             >
               At 16, I built{" "}
               <a
-                href="https://apps.apple.com/us/app/swipeflow-photo-cleaner/id6755852265"
+                href="https://mirondavide.github.io/SwipeFlowSite/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white underline underline-offset-4 hover:text-neutral-300 transition-colors"
