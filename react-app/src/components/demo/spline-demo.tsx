@@ -6,6 +6,20 @@ import { Linkedin, Github, FileUser } from "lucide-react"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
+function useIsLowEnd() {
+  const [isLowEnd, setIsLowEnd] = useState(false)
+
+  useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const cores = navigator.hardwareConcurrency || 4
+    const memory = (navigator as unknown as { deviceMemory?: number }).deviceMemory
+    const lowEnd = prefersReduced || cores <= 4 || (memory !== undefined && memory <= 4)
+    setIsLowEnd(lowEnd)
+  }, [])
+
+  return isLowEnd
+}
+
 const socialLinks = [
   { href: "https://www.linkedin.com/in/davide-miron/", icon: Linkedin, label: "LinkedIn" },
   { href: "https://github.com/mirondavide", icon: Github, label: "GitHub" },
@@ -31,6 +45,7 @@ function MobileSpline() {
 
 export function SplineSceneBasic() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null)
+  const isLowEnd = useIsLowEnd()
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
@@ -137,18 +152,22 @@ export function SplineSceneBasic() {
 
   return (
     <div className="w-full min-h-screen bg-black relative overflow-hidden">
-      <Spotlight
-        className="-top-40 left-0 md:left-60 md:-top-20"
-        fill="white"
-      />
-
-      {/* Spline scene - full screen background */}
-      <div className="absolute inset-0">
-        <SplineScene
-          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-          className="w-full h-full"
+      {!isLowEnd && (
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="white"
         />
-      </div>
+      )}
+
+      {/* Spline scene - skip on low-end devices */}
+      {!isLowEnd && (
+        <div className="absolute inset-0">
+          <SplineScene
+            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+            className="w-full h-full"
+          />
+        </div>
+      )}
 
       {/* Content overlay */}
       <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
