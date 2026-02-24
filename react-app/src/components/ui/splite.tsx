@@ -1,11 +1,12 @@
 'use client'
 
 import Spline from '@splinetool/react-spline'
+import type { Application } from '@splinetool/runtime'
 
 interface SplineSceneProps {
   scene: string
   className?: string
-  onLoad?: () => void
+  onLoad?: (app: Application) => void
 }
 
 export function SplineScene({ scene, className, onLoad }: SplineSceneProps) {
@@ -13,6 +14,7 @@ export function SplineScene({ scene, className, onLoad }: SplineSceneProps) {
     <Spline
       scene={scene}
       className={className}
+      renderOnDemand
       onLoad={onLoad}
     />
   )

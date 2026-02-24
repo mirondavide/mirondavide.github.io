@@ -6,19 +6,6 @@ import { Linkedin, Github, FileUser } from "lucide-react"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
-function useIsLowEnd() {
-  const [isLowEnd, setIsLowEnd] = useState(false)
-
-  useEffect(() => {
-    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
-    const cores = navigator.hardwareConcurrency || 4
-    const memory = (navigator as unknown as { deviceMemory?: number }).deviceMemory
-    const lowEnd = prefersReduced || cores <= 4 || (memory !== undefined && memory <= 4)
-    setIsLowEnd(lowEnd)
-  }, [])
-
-  return isLowEnd
-}
 
 const socialLinks = [
   { href: "https://www.linkedin.com/in/davide-miron/", icon: Linkedin, label: "LinkedIn" },
@@ -26,26 +13,18 @@ const socialLinks = [
   { href: "/curriculum/CV.pdf", icon: FileUser, label: "CV" },
 ]
 
-// Spline loader for mobile - loads immediately, fades in when ready
-function MobileSpline() {
-  const [isLoaded, setIsLoaded] = useState(false)
-
+// Lightweight ambient glow for mobile (replaces heavy Spline 3D scene)
+function MobileAmbient() {
   return (
-    <div
-      className={`absolute inset-0 pointer-events-none transition-opacity duration-500 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-    >
-      <SplineScene
-        scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-        className="w-full h-full"
-        onLoad={() => setIsLoaded(true)}
-      />
+    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-white/[0.03] blur-[100px]" />
+      <div className="absolute bottom-1/4 left-1/3 w-[300px] h-[300px] rounded-full bg-white/[0.02] blur-[80px]" />
     </div>
   )
 }
 
 export function SplineSceneBasic() {
   const [isMobile, setIsMobile] = useState<boolean | null>(null)
-  const isLowEnd = useIsLowEnd()
 
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768)
@@ -63,8 +42,8 @@ export function SplineSceneBasic() {
   if (isMobile) {
     return (
       <div className="w-full min-h-screen bg-black relative overflow-hidden">
-        {/* Spline loads after delay so content appears first */}
-        <MobileSpline />
+        {/* Lightweight ambient glow instead of heavy Spline 3D */}
+        <MobileAmbient />
 
         {/* Content */}
         <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
@@ -152,22 +131,18 @@ export function SplineSceneBasic() {
 
   return (
     <div className="w-full min-h-screen bg-black relative overflow-hidden">
-      {!isLowEnd && (
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="white"
-        />
-      )}
+      <Spotlight
+        className="-top-40 left-0 md:left-60 md:-top-20"
+        fill="white"
+      />
 
-      {/* Spline scene - skip on low-end devices */}
-      {!isLowEnd && (
-        <div className="absolute inset-0">
-          <SplineScene
-            scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
-          />
-        </div>
-      )}
+      {/* Spline scene - renderOnDemand for better performance */}
+      <div className="absolute inset-0">
+        <SplineScene
+          scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+          className="w-full h-full"
+        />
+      </div>
 
       {/* Content overlay */}
       <div className="relative z-10 pointer-events-none min-h-screen flex flex-col">
