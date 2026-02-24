@@ -14,7 +14,6 @@ export function SplineScene({ scene, className, onLoad }: SplineSceneProps) {
     <Spline
       scene={scene}
       className={className}
-      renderOnDemand
       onLoad={onLoad}
     />
   )
