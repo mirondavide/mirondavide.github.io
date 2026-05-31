@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Davide Miron",
-  description: "Building something that lasts beyond me.",
+  description: "Builder & Investor · a16z LP (SR004) · Shipping consumer products since 15.",
   icons: {
     icon: "/img/AI_img.webp",
   },

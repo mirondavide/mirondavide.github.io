@@ -1,6 +1,6 @@
 'use client'
 
-import { Linkedin, Github, FileUser } from "lucide-react"
+import { Linkedin, Github, FileUser, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
 import Image from "next/image"
 import { useEffect, useState } from "react"
@@ -8,6 +8,7 @@ import { useEffect, useState } from "react"
 const socialLinks = [
   { href: "https://www.linkedin.com/in/davide-miron/", icon: Linkedin, label: "LinkedIn" },
   { href: "https://github.com/mirondavide", icon: Github, label: "GitHub" },
+  { href: "https://x.com/davidem629241", icon: Twitter, label: "X" },
   { href: "/curriculum/CV.pdf", icon: FileUser, label: "CV" },
 ]
 
@@ -62,12 +63,11 @@ export default function MyStoryPage() {
 
               {/* Story paragraphs */}
               <p className="text-neutral-300 text-base text-left mb-4 leading-relaxed">
-                I started coding at 13 because I wanted to build my own apps and interfaces.
-                That curiosity led me into programming and design, where I&apos;ve been experimenting and improving through increasingly ambitious projects.
+                I build consumer products and back early-stage startups. I started coding at 13, shipped my first app at 15, and have built and shipped 8 apps since then.
               </p>
 
               <p className="text-neutral-300 text-base text-left mb-4 leading-relaxed">
-                At 16, I built{" "}
+                At 15, I built{" "}
                 <a
                   href="https://mirondavide.github.io/SwipeFlowSite/"
                   target="_blank"
@@ -76,7 +76,7 @@ export default function MyStoryPage() {
                 >
                   SwipeFlow
                 </a>
-                , a mobile app designed to help users clean their photo gallery faster and more intuitively through simple swipe gestures. The entire app runs fully on-device, keeps privacy first, and works seamlessly on both iOS and Android. It was one of the first moments where I realized: I want to become truly great at building products.
+                , a cross-platform gallery cleaner that hit 3,000+ downloads and 1,000+ MAU. I solo-built it end-to-end — product design, engineering, ASO, and growth. It was the moment I realized: I want to become truly great at building products.
               </p>
 
               {/* SwipeFlow Image */}
@@ -91,20 +91,20 @@ export default function MyStoryPage() {
               </div>
 
               <p className="text-neutral-300 text-base text-left mb-4 leading-relaxed">
-                Another project I&apos;m particularly proud of is the{" "}
+                I also built Frixi, an AI recipe generator where you snap a photo of your ingredients and it generates recipes for you. And I designed and built the official website for the{" "}
                 <a
                   href="https://conferintaeuropeana.it/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-white underline underline-offset-4"
                 >
-                  European Youth & Family Conference website
+                  European Youth & Family Conference
                 </a>
-                , which I built from scratch with a strong focus on responsive design and smooth user experience. I wanted it to feel modern, accessible, and intuitive on every device — and I pushed hard to make sure it did.
+                , which hosts 3,000+ attendees annually across Europe.
               </p>
 
               <p className="text-neutral-300 text-base text-left mb-4 leading-relaxed">
-                I&apos;m committed to growing, improving, and building products that genuinely stand out. I&apos;m not just learning to code — I&apos;m working to become exceptional at it.
+                At 16, I became the youngest LP in Italy by investing my personal savings into a16z&apos;s SR004 batch. My thesis is simple: ship with conviction, iterate faster than the market.
               </p>
 
               {/* IMPLICAT Image */}
@@ -253,15 +253,14 @@ export default function MyStoryPage() {
               variants={itemVariants}
               className="text-neutral-300 text-lg md:text-xl text-left mb-6 leading-relaxed"
             >
-              I started coding at 13 because I wanted to build my own apps and interfaces.
-              That curiosity led me into programming and design, where I&apos;ve been experimenting and improving through increasingly ambitious projects.
+              I build consumer products and back early-stage startups. I started coding at 13, shipped my first app at 15, and have built and shipped 8 apps since then.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-neutral-300 text-lg md:text-xl text-left mb-6 leading-relaxed"
             >
-              At 16, I built{" "}
+              At 15, I built{" "}
               <a
                 href="https://mirondavide.github.io/SwipeFlowSite/"
                 target="_blank"
@@ -270,7 +269,7 @@ export default function MyStoryPage() {
               >
                 SwipeFlow
               </a>
-              , a mobile app designed to help users clean their photo gallery faster and more intuitively through simple swipe gestures. The entire app runs fully on-device, keeps privacy first, and works seamlessly on both iOS and Android. It was one of the first moments where I realized: I want to become truly great at building products.
+              , a cross-platform gallery cleaner that hit 3,000+ downloads and 1,000+ MAU. I solo-built it end-to-end — product design, engineering, ASO, and growth. It was the moment I realized: I want to become truly great at building products.
             </motion.p>
 
             {/* SwipeFlow Image */}
@@ -288,23 +287,23 @@ export default function MyStoryPage() {
               variants={itemVariants}
               className="text-neutral-300 text-lg md:text-xl text-left mb-6 leading-relaxed"
             >
-              Another project I&apos;m particularly proud of is the{" "}
+              I also built Frixi, an AI recipe generator where you snap a photo of your ingredients and it generates recipes for you. And I designed and built the official website for the{" "}
               <a
                 href="https://conferintaeuropeana.it/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white underline underline-offset-4 hover:text-neutral-300 transition-colors"
               >
-                European Youth & Family Conference website
+                European Youth & Family Conference
               </a>
-              , which I built from scratch with a strong focus on responsive design and smooth user experience. I wanted it to feel modern, accessible, and intuitive on every device — and I pushed hard to make sure it did.
+              , which hosts 3,000+ attendees annually across Europe.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-neutral-300 text-lg md:text-xl text-left mb-6 leading-relaxed"
             >
-              I&apos;m committed to growing, improving, and building products that genuinely stand out. I&apos;m not just learning to code — I&apos;m working to become exceptional at it.
+              At 16, I became the youngest LP in Italy by investing my personal savings into a16z&apos;s SR004 batch. My thesis is simple: ship with conviction, iterate faster than the market.
             </motion.p>
 
             {/* IMPLICAT Image */}
