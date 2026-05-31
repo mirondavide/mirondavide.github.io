@@ -78,14 +78,11 @@ export function SplineSceneBasic() {
           className="pointer-events-auto sticky top-0 px-6 lg:px-10 py-3 backdrop-blur-md bg-white/5 border-b border-white/10"
         >
           <div className="flex items-center max-w-5xl mx-auto px-8">
-            <motion.a
-              href="/"
-              className="text-3xl font-semibold text-white no-underline"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <motion.span
+              className="text-3xl font-semibold text-white"
             >
               miron.
-            </motion.a>
+            </motion.span>
           </div>
         </motion.nav>
 
