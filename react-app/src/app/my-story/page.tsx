@@ -142,7 +142,7 @@ export default function MyStoryPage() {
 
           {/* Footer */}
           <footer className="text-center py-6 px-4 border-t border-white/10">
-            <p className="text-neutral-400 mb-3 text-sm">Building something that lasts beyond me.</p>
+            <p className="text-neutral-400 mb-3 text-sm">a16z LP (SR004) · Builder & Investor · 17</p>
             <div className="flex justify-center gap-4">
               <a href="https://www.linkedin.com/in/davide-miron/" className="text-neutral-400 text-sm">
                 LinkedIn
@@ -299,13 +299,6 @@ export default function MyStoryPage() {
               , which hosts 3,000+ attendees annually across Europe.
             </motion.p>
 
-            <motion.p
-              variants={itemVariants}
-              className="text-neutral-300 text-lg md:text-xl text-left mb-6 leading-relaxed"
-            >
-              At 16, I became the youngest LP in Italy by investing my personal savings into a16z&apos;s SR004 batch. My thesis is simple: ship with conviction, iterate faster than the market.
-            </motion.p>
-
             {/* IMPLICAT Image */}
             <motion.div variants={itemVariants} className="my-8">
               <Image
@@ -316,6 +309,13 @@ export default function MyStoryPage() {
                 className="mx-auto rounded-lg w-full"
               />
             </motion.div>
+
+            <motion.p
+              variants={itemVariants}
+              className="text-neutral-300 text-lg md:text-xl text-left mb-6 leading-relaxed"
+            >
+              At 16, I became the youngest LP in Italy by investing my personal savings into a16z&apos;s SR004 batch. My thesis is simple: ship with conviction, iterate faster than the market.
+            </motion.p>
 
             {/* Coming Soon */}
             <motion.p
@@ -356,7 +356,7 @@ export default function MyStoryPage() {
           transition={{ delay: 1, duration: 0.6 }}
           className="text-center py-8 px-4 border-t border-white/10"
         >
-          <p className="text-neutral-400 mb-4 text-base">Building something that lasts beyond me.</p>
+          <p className="text-neutral-400 mb-4 text-base">a16z LP (SR004) · Builder & Investor · 17</p>
           <div className="flex justify-center gap-6">
             <a
               href="https://www.linkedin.com/in/davide-miron/"

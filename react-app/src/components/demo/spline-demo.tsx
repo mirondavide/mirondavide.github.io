@@ -117,7 +117,7 @@ export function SplineSceneBasic() {
                 variants={itemVariants}
                 className="mt-4 text-neutral-300 text-xl md:text-2xl font-light tracking-wide px-2"
               >
-                Building something that lasts beyond me.
+                a16z LP (SR004) · Builder & Investor · 17
               </motion.p>
               <motion.div
                 variants={itemVariants}
