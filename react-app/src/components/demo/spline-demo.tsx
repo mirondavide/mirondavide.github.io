@@ -78,7 +78,7 @@ export function SplineSceneBasic() {
           transition={{ duration: 0.6 }}
           className="pointer-events-auto sticky top-0 px-6 lg:px-10 py-3 backdrop-blur-md bg-white/5 border-b border-white/10"
         >
-          <div className="flex items-center justify-between max-w-5xl mx-auto px-8">
+          <div className="flex items-center max-w-5xl mx-auto px-8">
             <motion.a
               href="/"
               className="text-3xl font-semibold text-white no-underline"
@@ -86,14 +86,6 @@ export function SplineSceneBasic() {
               whileTap={{ scale: 0.95 }}
             >
               miron.
-            </motion.a>
-            <motion.a
-              href="/my-story"
-              className="text-base text-neutral-300 hover:text-white transition-colors relative group"
-              whileHover={{ scale: 1.05 }}
-            >
-              My Story
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-white group-hover:w-full transition-all duration-300" />
             </motion.a>
           </div>
         </motion.nav>
@@ -117,7 +109,7 @@ export function SplineSceneBasic() {
                 variants={itemVariants}
                 className="mt-4 text-neutral-300 text-xl md:text-2xl font-light tracking-wide px-2"
               >
-                a16z LP (SR004) · Builder & Investor · 17
+                17 · a16z LP · shipping consumer products
               </motion.p>
               <motion.div
                 variants={itemVariants}
