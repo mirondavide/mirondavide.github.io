@@ -2,13 +2,12 @@
 
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight"
-import { Linkedin, Github, FileUser, Twitter } from "lucide-react"
+import { Linkedin, FileUser, Twitter } from "lucide-react"
 import { motion } from "framer-motion"
 
 
 const socialLinks = [
   { href: "https://www.linkedin.com/in/davide-miron/", icon: Linkedin, label: "LinkedIn" },
-  { href: "https://github.com/mirondavide", icon: Github, label: "GitHub" },
   { href: "https://x.com/davidem629241", icon: Twitter, label: "X" },
   { href: "/curriculum/CV.pdf", icon: FileUser, label: "CV" },
 ]
