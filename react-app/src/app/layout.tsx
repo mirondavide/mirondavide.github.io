@@ -16,7 +16,7 @@ const mono = Space_Mono({
   variable: "--font-mono",
 });
 
-const description = "Founder & CEO of Searchbase · a16z LP · Shipping consumer products.";
+const description = "Founder & CEO of Searchbase · turning data into intelligence.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mirondavide.com"),
