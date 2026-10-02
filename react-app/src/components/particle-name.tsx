@@ -332,7 +332,7 @@ export default function ParticleName() {
           <div className="hero-main">
             <p className="eyebrow">
               <span className="tick" />
-              Builder &amp; Investor
+              Founder &amp; CEO of Searchbase
             </p>
             <h1 className="name" ref={nameRef} aria-label="Davide Miron">
               <span className="line">
