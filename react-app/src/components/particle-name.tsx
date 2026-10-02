@@ -343,7 +343,7 @@ export default function ParticleName() {
               </span>
             </h1>
             <p className="tagline">
-              <b>17</b> · <b>a16z LP</b> · turning data into intelligence
+              <b>17</b> · turning data into intelligence
             </p>
           </div>
         </main>

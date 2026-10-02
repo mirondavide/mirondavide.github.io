@@ -1,5 +1,5 @@
-import { SplineSceneBasic } from "@/components/demo/spline-demo";
+import ParticleName from "@/components/particle-name";
 
 export default function Home() {
-  return <SplineSceneBasic />;
+  return <ParticleName />;
 }
