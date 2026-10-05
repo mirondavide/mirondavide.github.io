@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Davide Miron — CV</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#111317;
+    --muted:#8b8f98;
+    --rule:#e4e6ea;
+    --accent:#2f6bd8;
+    --mono:'Space Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --display:var(--mono);
+  }
+  @page{ size:A4; margin:19mm 20mm; }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    font-family:var(--mono);
+    color:var(--ink);
+    background:#fff;
+    font-size:11.5px;
+    line-height:1.62;
+    -webkit-font-smoothing:antialiased;
+    -webkit-print-color-adjust:exact;
+    print-color-adjust:exact;
+  }
+  a{ color:inherit; text-decoration:none; }
+
+  /* Header */
+  .name{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:33px;
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    margin:0 0 7px;
+  }
+  .eyebrow{
+    font-size:12px;
+    color:var(--ink);
+    margin:0 0 9px;
+  }
+  .eyebrow b{ color:var(--accent); font-weight:700; }
+  .contact{
+    font-size:11px;
+    color:var(--muted);
+    margin:0 0 20px;
+  }
+  .contact .sep{ padding:0 10px; color:var(--rule); }
+  .contact a{ color:var(--muted); }
+
+  .intro{
+    font-size:11.5px;
+    color:var(--ink);
+    margin:0 0 4px;
+    max-width:62ch;
+  }
+  .intro .thesis{ display:block; margin-top:2px; }
+
+  /* Sections */
+  .section{ margin-top:22px; }
+  .section-head{
+    font-size:10px;
+    letter-spacing:0.22em;
+    color:var(--muted);
+    text-transform:uppercase;
+    padding-bottom:7px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:14px;
+  }
+
+  .entry{ margin-bottom:15px; }
+  .entry:last-child{ margin-bottom:0; }
+  .entry-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:16px;
+  }
+  .entry-title{
+    font-family:var(--display);
+    font-weight:700;
+    font-size:13.5px;
+    color:var(--ink);
+  }
+  .entry-date{
+    font-size:11px;
+    color:var(--muted);
+    white-space:nowrap;
+    flex:none;
+  }
+  .entry-sub{
+    font-size:11px;
+    color:var(--muted);
+    margin:1px 0 5px;
+  }
+  ul.points{ list-style:none; margin:0; padding:0; }
+  ul.points li{
+    position:relative;
+    padding-left:14px;
+    font-size:11.5px;
+    color:var(--ink);
+  }
+  ul.points li::before{
+    content:"·";
+    position:absolute;
+    left:2px;
+    color:var(--ink);
+  }
+
+  .note{
+    font-style:italic;
+    font-size:11px;
+    color:var(--muted);
+    margin-top:14px;
+  }
+  .cert{
+    font-size:11.5px;
+    color:var(--ink);
+  }
+</style>
+</head>
+<body>
+
+  <h1 class="name">Davide Miron</h1>
+  <p class="eyebrow"><b>17</b> · turning data into intelligence</p>
+  <p class="contact">
+    <a href="mailto:mirondevx@gmail.com">mirondevx@gmail.com</a>
+    <span class="sep">|</span>
+    <a href="https://www.linkedin.com/in/davide-miron/">LinkedIn</a>
+    <span class="sep">|</span>
+    <a href="https://x.com/davidem629241">x.com/davidem629241</a>
+  </p>
+
+  <p class="intro">
+    I build consumer products and back early-stage startups. At 15, I shipped SwipeFlow
+    to 3,000+ users. At 16, I became the youngest LP in Italy through a16z.
+    <span class="thesis">Thesis: ship with conviction, iterate faster than the market.</span>
+  </p>
+
+  <section class="section">
+    <div class="section-head">Projects</div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">SwipeFlow</span>
+        <span class="entry-date">2024</span>
+      </div>
+      <div class="entry-sub">Cross-platform gallery cleaner</div>
+      <ul class="points">
+        <li>3,000+ downloads, 1,000+ MAU</li>
+        <li>Solo-built end-to-end: product design, engineering, ASO, growth</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Frixi: AI Recipe Generator</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">AI ingredient scanner &rarr; recipe generation</div>
+      <ul class="points">
+        <li>Photo &rarr; AI scans ingredients &rarr; generates recipes</li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">Conferinta Europeana</span>
+        <span class="entry-date">2025</span>
+      </div>
+      <div class="entry-sub">Official website for Europe's largest Romanian youth conference</div>
+      <ul class="points">
+        <li>3,000+ attendees annually across Europe</li>
+        <li>Designed and built the full event website · responsive, usability-focused</li>
+      </ul>
+    </div>
+
+    <p class="note">20+ apps built and shipped between age 15 and 17</p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">Investing</div>
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">a16z · LP (SR004 Batch)</span>
+        <span class="entry-date">2025 &ndash; Present</span>
+      </div>
+      <ul class="points">
+        <li>Youngest LP in Italy · invested 5k$ in a16z</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">Education</div>
+    <div class="entry">
+      <div class="entry-top">
+        <span class="entry-title">ITIS Leonardo da Vinci, Parma</span>
+        <span class="entry-date">2022 &ndash; 2027</span>
+      </div>
+      <div class="entry-sub">Computer Science</div>
+      <div class="cert">Certifications: Flutter Development · UX/UI Design (Udemy, 2023&ndash;2025)</div>
+    </div>
+  </section>
+
+</body>
+</html>
